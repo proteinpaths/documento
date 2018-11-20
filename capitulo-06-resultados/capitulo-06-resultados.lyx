@@ -135,7 +135,7 @@ status open
 
 \lang english
 \begin_inset Graphics
-	filename ../../../Downloads/05-Features/images/ICF-property-plot-villin-anton-selected.pdf
+	filename imagenes/ICF-property-plot-villin-anton-selected.pdf
 	scale 60
 
 \end_inset
@@ -227,7 +227,7 @@ status open
 
 \lang english
 \begin_inset Graphics
-	filename ../../../Downloads/05-Features/images/ICF-property-plot-1BDD-p0-selected.pdf
+	filename imagenes/ICF-property-plot-1BDD-p0-selected.pdf
 	scale 60
 
 \end_inset
