@@ -1371,7 +1371,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename ../../../Downloads/reduction/img/2JOF-FULL-500b04t10k-pdbsLocal-small.pdf
+	filename imagenes/2JOF-FULL-500b04t10k-pdbsLocal-small.pdf
 	lyxscale 30
 	scale 25
 	BoundingBox 0bp 45bp 1440bp 465bp
@@ -1384,7 +1384,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename ../../../Downloads/reduction/img/2JOF-FULL-500b04t10k-pdbsGlobal-small.pdf
+	filename imagenes/2JOF-FULL-500b04t10k-pdbsGlobal-small.pdf
 	lyxscale 30
 	scale 25
 	BoundingBox 0bp 10bp 1440bp 465bp
