@@ -1,0 +1,922 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ../ubcthesis
+\options openany
+\use_default_options true
+\master ../root.lyx
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Estado del arte
+\end_layout
+
+\begin_layout Standard
+En el trabajo realizado por Luis Garreta se aplicaron diversas técnicas
+ estadísticas para obtener un puntaje de grado de plegamiento en diversas
+ trayectorias de plegamiento de proteínas.
+ Con este puntaje se pudo identificar varios estados del proceso de plegado
+ los cuales no eran directamente observables a través de el cálculo de propiedad
+es estructurales y energéticas en las conformaciones.
+ A continuación se presentan los principales conceptos de dicha investigación,
+ la cual es usada en este trabajo, donde se extiende a otras trayectorías,
+ y donde se usa en conjunto con técnicas de reducción de datos para ampliar
+ su capacidad de aplicación.
+\end_layout
+
+\begin_layout Section
+
+\lang english
+Rasgos conformacionales inherentes
+\end_layout
+
+\begin_layout Subsection*
+
+\lang english
+Definiciones
+\end_layout
+
+\begin_layout Subsubsection*
+
+\lang english
+Rasgos de plegamiento de proteínas
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+El Análisis del Componente Principal realizado por el trabajo de Luis Garreta
+ mostró tres componentes principales PC1, PC2 y PC3.
+ El componente PC1 se cargó principalmente con cinco propiedades; mientras
+ que PC2, y PC3, se cargaron principalmente cada uno con tres propiedades,
+ como se muestra en la matriz de cargas de la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "figCmpFinalPCA-1"
+
+\end_inset
+
+.
+ El componente PC1 se cargó con contactos nativos, enlaces de hidrógeno,
+ residuos en estructuras secundarias correctas, residuos en cualquier estructura
+ secundaria y grados de libertad (NC, HB, RC, RA y DF, respectivamente).
+ El componente PC2 incluye orden de contacto, radio de giro y área de superficie
+ accesible (CO, RG y AS, respectivamente).
+ El componente PC3 se cargó con la desviación cuadrática media de la raíz
+ (RMSD), la RMSD local y la puntuación estructural (RM, LR, SS, respectivamente).
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+placement !h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\lang english
+\begin_inset Graphics
+	filename imagenes/propiedades-componentes-reducida.png
+	scale 90
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\lang english
+Distribución final de las propiedades de los componentes.
+\end_layout
+
+\end_inset
+
+
+\series bold
+Distribución final de las propiedades de los componentes.
+ 
+\series default
+(a) Matriz de cargas del PCA final con las principales propiedades (alto
+ peso) de cada componente.
+ b) Una vista de los componentes como grupos de propiedades interrelacionadas
+ que muestran alguna estructura oculta.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset CommandInset label
+LatexCommand label
+name "figCmpFinalPCA-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Inspeccionando las propiedades principales que se cargaron en cada uno de
+ los tres componentes conservados (Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "figCmpFinalPCA-1"
+
+\end_inset
+
+.b) se puede observar que hubo una asociación con tres rasgos de plegamiento
+ ocultos o no medibles directamente: 
+\emph on
+estabilidad, compactibilidad, and semejanza al estado nativo
+\emph default
+ (ver Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "figCmpInterpret"
+
+\end_inset
+
+).
+ El 
+\series bold
+\emph on
+componente de estabilidad
+\series default
+\emph default
+ fue influenciado principalmente por la propiedad relacionada con los enlaces
+ de hidrógeno (HB) cuyas interacciones estabilizan las estructuras proteicas.
+ Sus otras propiedades muestran las consecuencias de estas interacciones,
+ como el número de contactos nativos, los residuos en la estructura correcta
+ o cualquier estructura secundaria, y los grados de libertad que se reducen
+ a medida que los enlaces de hidrógeno imponen restricciones a las rotaciones
+ de los enlaces 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "RaderThorpe02b"
+literal "true"
+
+\end_inset
+
+.
+ El 
+\series bold
+\emph on
+componente de compactibilidad
+\emph default
+ 
+\series default
+fue influenciado por el radio de giro y la superficie accesible, dos propiedades
+ relacionadas con la compactibilidad de las proteínas 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LobanovGalzitskaya08"
+literal "true"
+
+\end_inset
+
+.
+ El 
+\series bold
+\emph on
+componente de semejanza al estado nativo
+\emph default
+ 
+\series default
+estuvo influenciado por propiedades relacionadas con la similitud estructural
+ entre una estructura objetivo y la nativa, descrita por RMSD, RMSD local
+ y la puntuación estructural.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+placement !htpb
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Graphics
+	filename imagenes/interpretacion-componentes.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\lang english
+Interpretación de los componentes.
+\end_layout
+
+\end_inset
+
+
+\series bold
+\lang english
+Interpretación de los componentes.
+ 
+\series default
+De acuerdo con las propiedades que se cargaron en los tres componentes se
+ asociaron con tres características intrínsecas del plegamiento de proteínas:
+ estabilidad, compactibilidad y semejanza al estado nativo.
+\begin_inset CommandInset label
+LatexCommand label
+name "figCmpInterpret"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+
+\lang english
+Rasgos conformacionales inherentes
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Con la interpretación anterior se propuso los componentes encontrados como
+ rasgos conformacionales inherentes del plegamiento de proteínas, los cuales
+ se denominaron 
+\emph on
+rasgos IC
+\emph default
+.
+ Los valores de cada característica en términos de sus propiedades físicas
+ pueden calcularse siguiendo el formulario general utilizado en PCA para
+ calcular las puntuaciones de los componentes
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hatcher94"
+literal "true"
+
+\end_inset
+
+: Cada característica se toma como una suma ponderada de las propiedades
+ de la proteína, con cargas (pesos) proporcionales a la fuerza de la relación
+ entre la característica y las propiedades de la proteína (ver Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "figCmpPca3d"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Graphics
+	filename imagenes/rasgosIc-plano-propiedades.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\lang english
+Representación de los rasgos IC en términos de sus propiedades.
+\end_layout
+
+\end_inset
+
+
+\series bold
+Representación de los rasgos IC en términos de sus propiedades.
+ 
+\series default
+Los tres componentes definen un espacio en 3D que se interpreta como los
+ tres rasgos de IC: estabilidad (PC1, eje de rojo), compactibilidad (PC2,
+ eje verde) y semejanza con el nativo (PC3, eje azul).
+ Pueden ser representados por un valor numérico en términos de la distancia
+ de sus propiedades físicas desde el origen (líneas de puntos) a lo largo
+ del eje de la característica IC correspondiente.
+\begin_inset CommandInset label
+LatexCommand label
+name "figCmpPca3d"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+El vector de tres rasgos 
+\begin_inset Formula $[F_{1},F_{2},F_{3}]$
+\end_inset
+
+ para una conformación de proteína correspondiente con los tres componentes
+ principales PC1, PC2 y PC3 es calculado al multiplicar el vector de sus
+ 11 propiedades 
+\begin_inset Formula $[p_{1},...,p_{11}]$
+\end_inset
+
+ por la matriz de cargas calculada para los tres componentes 
+\begin_inset Formula $[[L_{1,1},...L_{1,11}],[L_{2,1},...L_{2,11}],[L_{3,1},...L_{3,11}]]$
+\end_inset
+
+ como: 
+\begin_inset Formula 
+\begin{equation}
+\begin{split}\label{eqtCmpFeatures}F_{1}=p_{1}*L_{1,1}+...+p_{k}*L_{1,k}+...+p_{11}*L_{1,11}\\
+F_{2}=-(p_{1}*L_{2,1}+...+p_{k}*L_{2,k}+...+p_{11}*L_{2,11})\\
+F_{3}=p_{1}*L_{3,1}+...+p_{k}*L_{3,k}+...+p_{11}*L_{3,11}
+\end{split}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\lang english
+donde 
+\begin_inset Formula $F_{1},F_{2},$
+\end_inset
+
+ y 
+\begin_inset Formula $F3$
+\end_inset
+
+ corresponden a los rasgos de IC de estabilidad, compactibilidad y semejanza
+ al estado nativo, respectivamente.
+ El signo negativo en la definición del segundo rasgo (
+\begin_inset Formula $F_{2}$
+\end_inset
+
+), correspondiente a la compactibilidad, fue introducido para unificar la
+ tendencia del rasgo IC a incrementar en una ruta que se aproxima al estado
+ nativo.
+ Su componente principal PC2 decrece a medida que el plegamiento progresa,
+ contrario al comportamiento de los otros dos componentes.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Ahora podemos describir cualquier conformación de la proteína en términos
+ de los tres rasgos IC: estabilidad, compactibilidad y semejanza con el
+ estado nativo, en lugar de utilizar el gran conjunto de propiedades físicas.
+ Además, estas características del IC se convierten en propiedades observables
+ que pueden ser medidas.
+ Al vector de rasgos tridimensionales compuesto de estabilidad, compacidad
+ y semejanza con el nativo nos referimos como 
+\emph on
+estado de plegado
+\emph default
+ de una conformación.
+ El estado de plegado ofrece una representación concisa y compacta del grado
+ en que se pliega una determinada conformación, resumiendo sus propiedades
+ individuales y sin depender de su tamaño o topología de la conformación.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+
+\lang english
+El puntaje de grado de plegamiento
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Los hallazgos anteriores sugieren que los rasgos miden en cierta medida
+ la cantidad o grado de plegamiento para las conformaciones de las rutas.
+ Con esto se creó un puntaje que usa los tres rasgos para obtener una aproximaci
+ón del grado de plegamiento (ver abajo).
+ El puntaje definido fue nombrado 
+\emph on
+inherent conformational feature score, 
+\emph default
+o 
+\series bold
+\emph on
+ICF score
+\series default
+\emph default
+ y ofrece la aproximación al grado de plegamiento de una conformación de
+ proteína al calcular la información numérica de los tres rasfos.
+ El puntaje toma en cuenta la importancia de los rasgos de acuerdo a la
+ varianza de cada componente y es calculado como la suma ponderada de los
+ valores individuales de la rasgo IC, como se muestra en la fórmula siguiente:
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%ICF (c) = 
+\backslash
+frac {
+\backslash
+sum_{i=1}^3{v_i * F_i (c)} } {V}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+ICF(c)=\frac{v_{1}*F_{1}(c)+v_{2}*F_{2}(c)+v_{3}*F_{3}(c)}{V}\label{eqCmpICFScore}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+
+\lang english
+Medida de similitud conformacional
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+La transformación anterior muestra una conformación proteica en términos
+ de un conjunto reducido de rasgos que incorpora un conjunto mayor de diferentes
+ propiedades físicas estructurales y energéticas.
+ Ahora, usamos esta transformación para definir una medida de similitud
+ para comparar dos conformaciones de proteínas con respecto a sus rasgos
+ de IC.
+ La medida nos permite saber cuán lejos o cerca están un par de conformaciones
+ con respecto a su proceso de plegado y permite caracterizar las conformaciones
+ de una vía de plegado de proteínas en términos de grupos de conformaciones
+ con características conformacionales comunes de acuerdo a su grado de plegado.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Con esto se define la medida de similitud de dos proteínas como la distancia
+ Euclidiana en tre los vectores de sus rasgos IC: estabilidad (ST), compactibili
+dad (CP) y semejanza con la estructura nativa (NT).
+ Formalmente, dadas dos conformaciones de proteínas 
+\begin_inset Formula $a$
+\end_inset
+
+ y 
+\begin_inset Formula $b$
+\end_inset
+
+ y sus tres puntajes de los rasgos 
+\begin_inset Formula $(ST_{a},CP_{a},NT_{a})$
+\end_inset
+
+, y 
+\begin_inset Formula $(ST_{b},CP_{b},NT_{b})$
+\end_inset
+
+, respectivamennte, se define la distancia Euclidiana (
+\begin_inset Formula $\delta$
+\end_inset
+
+) entre ellos como:
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{align}
+\delta(a,b)=\sqrt{(ST_{a}-ST_{b})\text{²}+(CP_{a}-CP_{b})\text{²}+(NT_{a}-NT_{b})\text{²}}\label{eqCmpSmlMsr}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+
+\lang english
+Niveles de plegamiento
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+El plegamiento de la proteína puede ser tomado como una acumulación de cambios
+ del estado desplegado al estado nativo.
+ Consecuentemente, una proteína asume estados conformacionales dinámicamente
+ diferentes que comparten características conformacionales similares.
+ Utilizando esta visión del plegamiento de proteínas y las definiciones
+ anteriores, en los análisis realizados por Luis Garreta[XXXX] se encontró
+ que el plegamiento sigue cuatro niveles principales: desplegado, intermedio
+ temprano, intermedio tardío y plegado, como se muestra en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Identified-Protein-Folding"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\lang english
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Graphics
+	filename imagenes/niveles-plegamiento-proteinas.png
+	lyxscale 60
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\lang english
+Niveles de plegamiento de proteínas identificados.
+\end_layout
+
+\end_inset
+
+
+\series bold
+\lang english
+Niveles de plegamiento de proteínas identificados.
+ 
+\series default
+Los grupos de conformaciones pueden verse como estados metaestables de niveles
+ de plegado o plegado.
+ Las proteínas comienzan en un nivel desplegado, pasan a través de intermediario
+s tempranos y tardíos, y terminan en un nivel plegado.
+ Los números representan las probabilidades de transición entre estados
+ de acuerdo con los análisis antes mencionados.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Identified-Protein-Folding"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Usando un enfoque estadístico sobre el conjunto de las vías de plegamiento
+ de proteínas simuladas de Amato[
+\begin_inset CommandInset citation
+LatexCommand cite
+key "AmatoSong01"
+literal "false"
+
+\end_inset
+
+], Luis Garreta resumió la distribución de la puntuación del grado de plegado
+ (ICF) en los rangos que se muestran en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Distribution-folding-score"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Graphics
+	filename imagenes/distribucion-puntaje-plegamiento.png
+	lyxscale 60
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\lang english
+Distribución del puntaje ICF para los cuatro niveles de plegamiento.
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+Distribución del puntaje ICF para los cuatro niveles de plegamiento
+\series default
+.
+ Los valores de las puntuaciones aumentan a medida que los niveles de plegado
+ pasan de desplegado a plegado.
+ Cada nivel de plegamiento está bien diferenciado de los demás, como muestra
+ la media para cada nivel.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Distribution-folding-score"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+
+\lang english
+Clasificador de niveles de plegamiento
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Utilizando la medida de similitud introducida anteriormente (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eqCmpSmlMsr"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) se construyó un clasificador que asigna el nivel de plegado a una determinada
+ conformación de la proteína: para cada conformación de la proteína 
+\begin_inset Formula $c$
+\end_inset
+
+ se puede evaluar su distancia a la conformación central 
+\begin_inset Formula $g_{k}$
+\end_inset
+
+ como 
+\begin_inset Formula $\delta(c,g_{k})$
+\end_inset
+
+.
+ El nivel de plegamiento 
+\begin_inset Formula $lev(c)$
+\end_inset
+
+ se asigna como el valor de 
+\begin_inset Formula $k$
+\end_inset
+
+ que minimiza la distancia entre 
+\begin_inset Formula $c$
+\end_inset
+
+ y 
+\begin_inset Formula $g_{k}$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\begin{equation}
+lev(c)=\argmin_{g_{k}}\delta(c,g_{k})|k={1,...,4}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

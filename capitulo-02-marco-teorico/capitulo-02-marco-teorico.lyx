@@ -1,0 +1,1039 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ../ubcthesis
+\use_default_options true
+\master ../root.lyx
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Marco teórico
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "chpBackground"
+
+\end_inset
+
+ En este capítulo presentamos algunos conceptos básicos de la estructura
+ de la proteína y el plegamiento de proteínas.
+ Describimos las dos visiones del problema del plegamiento de proteínas,
+ una relacionada con la predicción de la estructura, y la otra relacionada
+ con la explicación del proceso de plegamiento de proteínas inherente.
+ A continuación, presentamos el concepto de rutas e intermedios.
+ Y finalmente, describimos brevemente la técnica de dinámica molecular para
+ estudiar y analizar el movimiento de las moléculas.
+\end_layout
+
+\begin_layout Section
+Estructura de una proteína
+\end_layout
+
+\begin_layout Standard
+Las proteínas son cadenas lineales de residuos de aminoácidos (residuos
+ en adelante), que adoptan estructuras tridimensionales (3D) únicas y que
+ están involucradas en casi todas las funciones de todos los organismos
+ vivos.
+ Están asociados a funciones que van desde la replicación del ADN hasta
+ el movimiento muscular, el transporte de moléculas dentro y fuera de la
+ célula, y la catálisis de reacciones importantes, entre muchas otras.
+ 
+\end_layout
+
+\begin_layout Standard
+La mayoría de los residuos tienen una estructura común de un 
+\emph on
+backbone
+\emph default
+ central con un átomo principal de carbono alfa (
+\begin_inset Formula $C\alpha$
+\end_inset
+
+) con cuatro partes adjuntas: un grupo amino;un grupo carboxilo; un átomo
+ de hidrógeno; y el grupo 
+\begin_inset Formula $R$
+\end_inset
+
+ o cadena lateral que distingue un aminoácido de otro (ver Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "figAminoChain-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ Cada par de residuos se conecta entre sí formando un enlace peptídico que
+ establece la cadena principal o 
+\emph on
+backbone
+\emph default
+ del polipéptido.Algunos de estos enlaces, los únicos enlaces donde el 
+\begin_inset Formula $C\alpha$
+\end_inset
+
+ participa, permiten rotaciones que le dan flexibilidad a la proteína y
+ por lo tanto la adopción de diferentes formas de proteína.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename imagenes/protein-structure-aminos.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Un polipéptido como cadena de residuos de aminoácidos.
+\end_layout
+
+\end_inset
+
+
+\series bold
+Un polipéptido como cadena de residuos de aminoácidos.
+ 
+\series default
+\size scriptsize
+Tres residuos unidos entre sí.
+ La libertad de rotación se puede describir por ángulos de torsión conocidos
+ como ángulos diedros.
+ Las dos rotaciones principales asociadas a cada residuo vienen dadas por
+ el ángulo 
+\begin_inset Formula $\phi$
+\end_inset
+
+ (
+\begin_inset Formula $phi$
+\end_inset
+
+, que representa la rotación a lo largo del enlace 
+\begin_inset Formula $N-C\alpha$
+\end_inset
+
+ ) y el ángulo 
+\begin_inset Formula $\psi$
+\end_inset
+
+ (
+\begin_inset Formula $psi$
+\end_inset
+
+, que representa la rotación a lo largo del enlace 
+\begin_inset Formula $C\alpha-C$
+\end_inset
+
+).
+\size default
+
+\begin_inset CommandInset label
+LatexCommand label
+name "figAminoChain-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pero esta visión de una proteína como una simple secuencia lineal de residuos
+ o
+\emph on
+ estructura primaria
+\emph default
+ es sólo una de las cuatro abstracciones utilizadas para describir la estructura
+ de la proteína (ver Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "figFoldingLevels"
+
+\end_inset
+
+).
+ Las otras tres: secundaria, terciaria y cuaternaria, involucran las regularidad
+es y principios subyacentes que finalmente conducen a su forma final y propiedad
+es funcionales características.
+ La 
+\emph on
+estructura secundaria
+\emph default
+ se asocia con conformaciones locales que forman estructuras regulares o
+ elementos estructurales secundarios (EESs) como la hélice 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, el hilo 
+\begin_inset Formula $\beta$
+\end_inset
+
+ y los giros.
+ La 
+\emph on
+estructura terciaria
+\emph default
+ describe cómo estos EESs están organizados espacialmente dando la forma
+ 3D final de la proteína llamada el 
+\emph on
+estado plegado
+\emph default
+ o el 
+\emph on
+estado nativo
+\emph default
+.
+ Y la 
+\emph on
+estructura cuaternaria
+\emph default
+ describe la disposición de varias cadenas de proteínas en un complejo de
+ proteínas.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename imagenes/folding-levels-LG.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Los cuatro niveles de estructura de las proteínas.
+\end_layout
+
+\end_inset
+
+
+\series bold
+Los cuatro niveles de estructura de las proteínas.
+ 
+\series default
+\size scriptsize
+A) Estructura primaria (residuos de la cadena de polipéptidos.
+ (B) Estructura secundaria (una hélice alfa).
+ (C) Estructura terciaria (Una cadena completa de proteínas) (D) Estructura
+ cuaternaria (Múltiples cadenas) 
+\begin_inset CommandInset label
+LatexCommand label
+name "figFoldingLevels"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Proceso de plegamiento de proteínas
+\end_layout
+
+\begin_layout Standard
+Una proteína se pliega desde una cadena no estructurada (estado desplegado),
+ con alta energía libre, hasta un estado estable final (estado nativo),
+ con baja o mínima energía libre.
+ Durante este proceso, denominado 
+\emph on
+proceso de plegamiento
+\emph default
+, una proteína experimenta interacciones sucesivas entre los átomos de sus
+ residuos (y también los átomos del disolvente circundante) hasta alcanzar
+ un estado estable que determina fuertemente su función biológica.
+ Estas interacciones pueden ser de diferentes maneras: interacciones cortas
+ entre residuos cercanos en secuencias, e interacciones grandes que involucran
+ partes de la proteína que están muy distantes en secuencia.
+\end_layout
+
+\begin_layout Standard
+Aunque los residuos de proteínas se mantienen unidos por enlaces peptídicos,
+ las interacciones más importantes que estabilizan las proteínas provienen
+ de fuerzas no covalentes débiles como las interacciones electrostáticas,
+ los enlaces de hidrógeno, los puentes salinos y las fuerzas de van-der-Waals.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Whitford05"
+literal "true"
+
+\end_inset
+
+.Las interacciones electrostáticas o carga-carga ocurren entre átomos debido
+ a la atracción y repulsión de cargas opuestas y las mismas cargas parciales,
+ respectivamente.
+ Los enlaces de hidrógeno ocurren entre átomos unidos a átomos de hidrógeno
+ positivamente polarizados (donantes) y negativamente polarizados (aceptadores).
+ Los puentes salinos se producen entre los átomos donantes y los aceptadores
+ totalmente cargados.
+ Las interacciones van-der-Waals ocurren entre átomos adyacentes que no
+ están cargados y que no están enlazados, y que surgen de las fluctuaciones
+ en la distribución de los electrones.
+\end_layout
+
+\begin_layout Section
+El problema de plegamiento de proteínas
+\end_layout
+
+\begin_layout Standard
+El problema del plegado de proteínas se centra en la forma en que una proteína
+ se pliega desde su secuencia de aminoácidos a una estructura 3D estable.
+ Es uno de los rompecabezas más importantes, complejos y fascinantes de
+ la historia de la ciencia.
+ Muchas áreas de la ciencia se han unido para buscar una solución, pero
+ hasta hoy sólo se obtienen aproximaciones a la estructura tridimensional
+ de las proteínas.
+ El proceso de plegado es relevante para dos problemas diferentes pero relaciona
+dos
+\begin_inset CommandInset citation
+LatexCommand cite
+key "DillOzcan07, BystroffShao03"
+literal "true"
+
+\end_inset
+
+: la predicción de la estructura 3D a partir de su secuencia de aminoácidos
+ y la comprensión del proceso subyacente de plegado.
+ En el primero, el interés principal radica únicamente en la predicción
+ de la estructura de una proteína diana desconocida.
+ En este último, el enfoque se centra en la comprensión de los mecanismos,
+ fuerzas e interacciones que impulsan a las proteínas a alcanzar un estado
+ estable final.
+\end_layout
+
+\begin_layout Subsection
+Predicción de estructura de proteínas
+\end_layout
+
+\begin_layout Standard
+La predicción de la estructura de la proteína se ha llevado a cabo principalment
+e mediante técnicas de comparación y simulación.
+ La comparación es útil cuando existe conocimiento de otras proteínas, con
+ propiedades similares a las de la proteína diana.
+ Si no existe una proteína similar, la principal técnica teórica es simular
+ el proceso de plegado.
+ Estas simulaciones se realizan principalmente mediante dinámica molecular,
+ que es un método computacional que permite predecir las propiedades estáticas
+ y dinámicas de la proteína a partir de las interacciones subyacentes entre
+ sus moléculas.
+ Además de esta técnica, existen otros métodos para simular y estudiar el
+ plegamiento de proteínas, como el Probabilistic Roadmap Method que construye
+ la ruta de plegamiento de proteínas o secuencia de eventos que la proteína
+ probablemente sigue para alcanzar su estado nativo.
+\end_layout
+
+\begin_layout Subsection
+Modelos de plegamiento de proteínas
+\begin_inset CommandInset label
+LatexCommand label
+name "secFoldingModels"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Para el segundo problema, han surgido varios modelos para explicar y comprender
+ el mecanismo de plegamiento de proteínas
+\begin_inset CommandInset citation
+LatexCommand cite
+key "DillOzcan07, DaggettFersht03"
+literal "true"
+
+\end_inset
+
+, tres representantes son el modelo framework, en el cual las estructuras
+ secundarias se forman primero y luego se difunden rápidamente y colisionan
+ para propagarse a la estructura terciaria; el modelo de nucleación, proponiendo
+ que un núcleo inicial de estructura secundaria local se forme primero y
+ luego se propague y crezca para formar las estructuras terciarias; y finalmente
+ el modelo de colapso hidrofóbico, en el cual el colapso hidrofóbico impulsa
+ el plegamiento formando un núcleo compacto o glóbulo fundido que se reordena
+ para formar la estructura terciaria.
+\end_layout
+
+\begin_layout Standard
+En los últimos años, ha surgido una "nueva visión" del plegado de proteínas
+ conocida como la teoría del 
+\emph on
+embudo de plegamiento
+\emph default
+.Visualiza el proceso de plegado como una especie de embudo de libre energía,
+ en el que varias conformaciones desplegadas de una proteína en el borde,
+ caracterizadas por una alta energía libre y un alto grado de entropía conformac
+ional, pueden plegarse siguiendo muchos caminos, hasta alcanzar su estado
+ plegado (nativo) en un solo mínimo global en el fondo.
+ (ver Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "figFoldingFunnel"
+
+\end_inset
+
+).
+ Esta teoría da otra visión del plegamiento de proteínas sin invalidar los
+ modelos anteriores.
+ A medida que una proteína se pliega, las trayectorias del movimiento se
+ encuentran en embudos más estrechos con presencia reducida de estados conformac
+ionales.
+ Una proteína puede seguir muchos caminos pasando a través de intermedios
+ y estados de transición presentes a lo largo del embudo.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename imagenes/folding-funnel-Griffiths01-mod.pdf
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+La vista del embudo de plegamiento.
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+La vista del embudo de plegamiento.
+ 
+\series default
+\size scriptsize
+A medida que la proteína se pliega, su energía libre disminuye y su proporción
+ de contactos nativos crece (Grado de cercanía al estado nativo).
+ El ancho del embudo (entropía conformacional) representa la libertad conformaci
+onal de la cadena.
+ Varias conformaciones desplegadas U1, U2, y U3 pueden seguir muchos caminos
+ pasando a través de estados intermedios y de transición que pueden estar
+ presentes a lo largo del embudo de libre energía.
+ Estos estados pueden ralentizar o acelerar la ruta o senda de plegado,
+ redirigiendo la proteína a una ruta más empinada (izquierda amarilla 'más
+ rápida') o a rutas redondas (rojas y verdes más lentas)
+\size default
+
+\begin_inset CommandInset label
+LatexCommand label
+name "figFoldingFunnel"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Section
+Rutas de plegamiento de proteínas
+\end_layout
+
+\begin_layout Standard
+Muchas proteínas se pliegan a sus conformaciones nativas en menos de unos
+ segundos porque el plegado de proteínas no es una búsqueda aleatoria del
+ nativo entre todas las conformaciones posibles.
+ Esta afirmación fue probada por Levinthal a finales de los años 60.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Levinthal68"
+literal "true"
+
+\end_inset
+
+ con la argumentación de que las proteínas siguen rutas específicas de plegado
+ de proteínas que son secuencias de eventos (intermedios de plegado) que
+ pliegan la proteína desde el estado desplegado hasta el estado nativo.
+\end_layout
+
+\begin_layout Standard
+La visión de un único sendero de plegamiento formulada por Levinthal fue
+ debatida cuando nuevas teorías, como la del embudo de plegamiento, que
+ propone la existencia de múltiples rutas.
+ En la teoría del embudo de plegamiento las proteínas se pliegan, moviéndose
+ desde la parte superior a la inferior del embudo, por un sesgo general
+ de la superficie de la energía que reduce el problema de la búsqueda a
+ escalas de tiempo biológicamente relevantes sin necesidad de seguir un
+ camino específico pero con la posibilidad de llegar al nativo por muchos
+ de ellos.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Lazaridis97"
+literal "true"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Sin embargo, el concepto clásico de una ruta de plegado como una secuencia
+ de eventos seguida de proteínas, sigue siendo válido en esta "nueva visión"
+ del plegado.
+ Los múltiples y microscópicos caminos que una proteína puede seguir, sólo
+ están cubriendo una ruta más general y macroscópica.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "PandeTanaka98, Undgaonkar08"
+literal "true"
+
+\end_inset
+
+.
+ Los estados por los que pasa una proteína se interpretan en términos de
+ conjuntos de conformaciones.
+ Y la secuencia de eventos seguida por las proteínas corresponde a encontrar
+ uno de los muchos miembros del conjunto, resultando al final en muchas
+ rutas posibles.
+\end_layout
+
+\begin_layout Section
+Intermedios de plegamiento
+\end_layout
+
+\begin_layout Standard
+Aunque la importancia de los productos intermedios en el plegado y la función
+ de las proteínas ha sido reconocida desde hace mucho tiempo, siguen abiertas
+ preguntas fundamentales sobre el papel que desempeñan en el plegado.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Brockwell2007, Undgaonkar08"
+literal "true"
+
+\end_inset
+
+.
+ ¿Pueden considerarse como meros hitos cinéticos que indican el camino a
+ seguir por la proteína? ¿Son responsables de los estados fallidos y, por
+ lo tanto, son los progenitores de las enfermedades humanas? O por el contrario,
+ ¿su presencia sirve para redirigir la proteína a la vía "correcta" y así
+ poder corregir cualquier error acumulado?
+\end_layout
+
+\begin_layout Standard
+En la ruta para alcanzar su estado nativo, una proteína pasa a través de
+ estados intermedios formando estructuras intermedias o 
+\emph on
+intermedios de plegamiento
+\emph default
+, como argumentó Levinthal con las vías de plegamiento de proteínas.
+ Pero su presencia fue objeto de mucha controversia
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Brockwell2007"
+literal "true"
+
+\end_inset
+
+ dado que no podían detectarse en muchas proteínas, como por ejemplo el
+ gran grupo de proteínas con un simple plegado de dos estados o una transición
+ directa del estado desplegado al plegado sin población de intermedios.
+ Ahora que los métodos experimentales de plegado han mejorado, su presencia
+ es más evidente y el debate ha cambiado a las cuestiones de qué papel juegan
+ en el plegado y cómo se caracterizan 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Chen2008,Undgaonkar08,Brockwell2007"
+literal "true"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Por las razones anteriores, actualmente no existe una definición establecida
+ de lo que es un intermedio plegable, sin embargo muchos autores coinciden
+ en características comunes sobre ellos: 
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\emph on
+Los intermedios son estructuras metaestables parcialmente plegadas, presentan
+ una estructura secundaria similar a la nativa con interacciones terciarias
+ débiles o ausentes, y una entropía sustancial debido a que el pobre empaquetado
+ de residuos como cadenas laterales no está fijado y los residuos del núcleo
+ hidrofóbico permanecen parcialmente solvatados.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Undgaonkar08,BaldwinRose99,Brockwell2007,SzilagyiZavodszky07,ChalikianBreslauer96"
+literal "true"
+
+\end_inset
+
+
+\emph default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+En el mismo sentido, no existe un tipo único de intermedios, ya que pueden
+ presentar características diferentes según el nivel de plegamiento que
+ exhiben.
+ Como las estructuras nativas secundarias y supersecundarias pueden variar
+ de parciales a completas, y el empaquetado de residuos puede ser débil
+ o fuerte, muchos autores han identificado dos tipos de intermedios
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Baldwin2013, Undgaonkar08, RoderChang06, Uversky2002, DuanKollman98, RoderColon1997"
+literal "true"
+
+\end_inset
+
+: 
+\emph on
+Intermedios tempranos
+\emph default
+, más cercanos al estado desplegado, con falta de elementos de estructuras
+ secundarias e interacciones terciarias muy débiles o completamente ausentes,
+ y que evidencian un núcleo hidrofóbico muy poco compacto.
+ Y,
+\emph on
+ intermedios tardíos
+\emph default
+, más cercanos al estado nativo, y caracterizados como una estructura metaestabl
+e, semicompacta, parcialmente plegada con estructura secundaria similar
+ a la nativa pero sin interacciones terciarias completas, y evidenciando
+ un núcleo considerable de grupos no polares debido al pobre empaque de
+ residuos.
+\end_layout
+
+\begin_layout Section
+Plegamiento de proteínas computacional
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "secCompFolding"
+
+\end_inset
+
+ Las predicciones de la estructura de una proteína se han llevado a cabo
+ principalmente usando técnicas de comparación y simulación.
+ La comparación es útil cuando existe información de otras proteínas con
+ características similares a la objetivo.
+ En caso contrario la técnica a usar es la simulación del proceso.
+ Estas simulaciones se realizan principalmente usando dinámica molecular,
+ la cual es una técnica computacional que permite predecir propiedades estáticas
+ y dinámicas de la proteína a partir de las interacciones entre sus moléculas.
+ 
+\end_layout
+
+\begin_layout Standard
+Si bien es cierto que las técnicas para estudiar el plegamiento de proteínas
+ ha mejorado en los últimos tiempos, aún se encuentran limitados en cuanto
+ a los detalles del mismo.
+ Por ejemplo, los estudios experimentales de plegamiento de proteínas se
+ ven obstaculizados por el hecho de que sólo se pueden obtener datos estructural
+es de baja resolución con una resolución temporal suficiente.
+ Por esta razón, varias estrategias computacionaes han emergido como enfoques
+ complementarios, siendo en algunos casos el único mecanismo para obtener
+ una buena aproximación de los detalles de la dinámica de una proteína.
+\end_layout
+
+\begin_layout Subsection
+Simulaciones de Dinámica Molecular (DM)
+\end_layout
+
+\begin_layout Standard
+En la actualidad la técnica de Dinámica Molecular (DM) es una de las principales
+ herramientas para el estudio de moléculas y produce movimientos físicos
+ de átomos altamente realísticos, así como trajectorias de plegamiento de
+ proteínas 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "PandeRhee08"
+literal "false"
+
+\end_inset
+
+.
+ Uno de us principales resultados es una serie de snapshots de las posiciones
+ y velocidades de los átomos como una función del tiempo, representando
+ una trayectoria del sistema, lo que corresponde a una ruta de transición
+ de alta resolución 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "PandeRhee08, Javidpour12, Lomdahl94"
+literal "true"
+
+\end_inset
+
+.
+ DM lleva la traza de las posiciones y las velocidades de los átomos de
+ la proteína y como interactúan entre ellos y responden a fuerzas externas.
+ DM calcula el movimiento de todas las partículas de las proteínas intergrando
+ numéricamente las ecuaciones de movimiento de Newton de manera simultánea
+ y repetidamente en pequeños pasos de tiempo durante un periodo determinado.
+ La ecuación en su forma más simplista establece que:
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Fuerza = Masa
+\begin_inset Formula $\times$
+\end_inset
+
+ Aceleración
+\end_layout
+
+\begin_layout Standard
+donde la fuerza en un átomo dado depende de las interacciones con todos
+ los demás.
+ Modelar las fuerzas en este proceso requiere la definición de una función
+ de potencial muy detallada y precisa en la forma de ecuaciones y parámetros
+ que describan las interacciones entre las partículas de un sistema y retornen
+ su energía potencial como función de sus conformaciones.
+ Si bien DM produce simulaciones físicamente realísticas, es computacionalmente
+ costoso y solamente se pueden simular proteínas pequeñas en tiempos factibiles,
+ convirtiéndose de esta manera en un desafío computacional la simulación
+ de proteínas más grandes en escalas de milisegundos 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Garreta11"
+literal "false"
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "PandeRhee08"
+literal "true"
+
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+Esta es agregada del paper de reduccion
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Métodos de Comparación de Estructuras de Proteínas
+\end_layout
+
+\begin_layout Standard
+Cuantificar la diferencia entre dos estrucutras de una misma proteína puede
+ parecer simple pero no es un problema trivial, y las distintas aproximaciones
+ para abordarlo están en contínua evolución.
+ En 1994 se originó CASP (Critical Assessment of techniques for protein
+ Structure Prediction) como un experimiento de comunidad científica, el
+ cual brinda la posibilidad de evaluar métodos en predicciones 
+\begin_inset Quotes cld
+\end_inset
+
+ciegas
+\begin_inset Quotes crd
+\end_inset
+
+ de proteínas recientemente resueltas pero sin publicar, convirtiendose
+ así en una medida del estado del arte en modelamiento de estructuras de
+ proteínas a partir de su secuencia de aminoácidos
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Moult2014"
+literal "false"
+
+\end_inset
+
+.
+ Con esto se puede decir que los métodos de comparación de estructuras han
+ estado en desarrollo activo y se han usado en el campo de la modelación
+ computacional específicamente para medir la calidad de los modelos predichos.
+ Sin embargo, aunque estos modelos fueron originalmente desarollados para
+ evaluar estos modelos simulados, ahora su aplicación se extiende además
+ a la identificación, evaluación, entendimiento y predicción de cambios
+ conformacionales en proteínas, siendo esto un punto clave en su funcionamiento
+ biológico
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Kufareva2015"
+literal "true"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Dentro de los métodos más conocidos se puede citar el RMSD global, el GDS
+ y el TM-score.
+ A continuación se presenta una descripción general de cada uno de ellos,
+ así como los casos en los que unos resultan más adecuados que los demás.
+\end_layout
+
+\begin_layout Subsection
+RMSD
+\end_layout
+
+\begin_layout Standard
+La medida RMSD (Root Mean Square Deviation) es la medida cuantitativa de
+ similitud entre dos coordenadas atomicas superpuestas más usada comunmente.
+ Esta medida puede ser calculada para cualquier tipo y subset de atomos.
+ Un uso común es calcualr el RMSD sobre los carbonos alfa (Cα), lo que reduce
+ la cantidad de cálculos a realizar.
+ Una de las desventajas de RMSD radica en que es muy sensible a los errores.
+ Incluso si dos estructuras son casi identicas excepto un tramo, la superimposic
+ión de las estrucutras no puede ser realizada de la manera más efectiva
+ por el algoritmo que optimiza el RMSD global.
+\end_layout
+
+\begin_layout Standard
+Otro aspecto importante observado en esta métrica es un efecto observado
+ en sistemas macromoleculares muy grandes, donde los efectos de la dimensionalid
+ad producen lo que se conoce como 
+\begin_inset Quotes cld
+\end_inset
+
+la maldición de la dimensionalidad
+\begin_inset Quotes crd
+\end_inset
+
+, haciendo referencia a una capacidad decreciente para discriminar la diferencia
+ entre pares de conformaciones a medida que aumenta el tamaño del sistema
+ e impactando de esta manera el análisis basado en RMSD
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Sargsyan2017"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+GDT
+\end_layout
+
+\begin_layout Standard
+También conocido como GDT TS (por total score).
+ Sirve para medir la similitud entre dos estructuras de proteínas con una
+ secuencias de aminoácidos idénticas pero una estructura terciaria distinta.
+ Es una métrica pensada para ser una medida más precisa que RMSD, la cual,
+ como se mencionó, es muy sensible a las regiones atípicas de modelados
+ pobres aun cuando el resto de la estructura sea razonablemente similar.
+ En general, cuanto más alto es el valor de GDT_TS, mejor es un modelo determina
+do comparado con una estructura de referencia.
+ El valor GDT se calcula como el conjunto más largo de átomos carbonos alfa
+ en la estructura modelo que se encuentran a una determinada distancia de
+ la proteína referencia.
+ Dicha distancia está determinada por un umbral específico.
+ En general el GDT score se calcula usando varios umbrales, y típicamente
+ un aumento en el umbral implica un aumento en el score.
+ Si esto no es así, es posible que sea un indicador de que la divergencia
+ entre la estructura referencia y el modelo es muy alta.
+ Uno de los problemas de la técnica es que la elección del valor de los
+ umbrales es subjetiva y necesitan ser ajustados manualmente para diferentes
+ categorías de objetivos de modelado
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Xu2010"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+TM-score
+\end_layout
+
+\begin_layout Standard
+TM-score (Template modeling score) es otra medida de similitud entre dos
+ proteínas que tienen distintas estructuras terciarias.
+ Fue concebida como una medida más precisa que RMSD y GDT.
+ TM-score representa la diferencia entre dos estructuras con un puntaje
+ que va de 0 a 1, donde 1 indica un emparejamiento perfecto de ambas proteínas.
+ Un puntaje de menos de 0.20 indica una comparación entre dos proteínas aleatoria
+s no relacionadas entre sí.
+ Esta métrica está diseñada para ser independiente de la longitud de las
+ proteínas que se están comparando
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zhan2004"
+literal "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_body
+\end_document

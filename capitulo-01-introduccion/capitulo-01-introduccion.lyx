@@ -1,0 +1,312 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ../ubcthesis
+\use_default_options true
+\master ../root.lyx
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Introducción
+\end_layout
+
+\begin_layout Standard
+En general la bioinformática se ha caracterizado por trabajar con conjuntos
+ de datos voluminosos e incrementales y métodos complejos de análisis de
+ datos
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Kashyap2016"
+literal "false"
+
+\end_inset
+
+.
+ Los avances tecnológicos de la actualidad han abierto muchas posibilidades,
+ especialmente en el campo de la bioinformática, aumentando aún más las
+ oportunidades de análisis, pero también los retos que esto conlleva.
+ Diversos sistemas biológicos pueden ser analizados con gran eficiencia
+ y en general a bajo costo.
+ La consecuencia natural de esto es una gran cantidad de datos por procesar,
+ de los cuales se espera extraer información que permita conocer más sobre
+ algún proceso biológico en particular
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Min2017,Katal2013"
+literal "false"
+
+\end_inset
+
+.
+ Esto conduce además a otros retos: el procesamiento de grandes cantidades
+ de datos requiere de técnicas que hagan viable su ejecución teniendo en
+ cuenta las restricciones técnicas que se tienen al ser la capacidad computacion
+al un recurso limitado.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dentro de los diversos temas que se trabajan en bioinformática, el problema
+ del plegamiento de proteínas es uno de los que mayor atención ha captado
+ y uno de los que lleva más tiempo sin resolver
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Chan1993,Dill2007"
+literal "false"
+
+\end_inset
+
+.
+ Básicamente, se trata de endender como una proteína, partiendo de una secuencia
+ lineal de aminoácidos, logra plegarse rápidamente para tomar una forma
+ tridimensional específica que determina su función
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Dill2008,Dill2012"
+literal "false"
+
+\end_inset
+
+.
+ Y más que eso: ¿se puede este proceso biológico simular computacionalmente?
+ Desde hace años se han desarrollado técnicas que permiten, con distinto
+ grado de precisión, predecir dicha estructura tridimensional a partir de
+ la información sobre los aminoácidos que conforman la proteína.
+ Es un problema aún abierto porque se trata de procesos que demandan gran
+ cantidad de recursos computacionales, y su resolución tendría un impacto
+ en el entendimiento de ciertas enfermedades y en el desarrollo de determinados
+ medicamentos.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sobre este tema, el trabajo de rasgos conformacionales desarrollado por
+ Luis Garreta en el grupo de Bioinformática y Biocomputación de la Universidad
+ del Valle ofrece una visión importante del proceso de plegamiento al identifica
+r estados de plegamiento en diversas simulaciones de plegamiento de proteínas.
+ Ofrece además un puntaje de plegamiento que puede ser aplicado a cualquier
+ conformación individual de los miles que pueden hacer parte de una simulación
+ (trayectoria) y calcular que tan plegada o desplegada se encuentra, usando
+ para esto la información obtenida y analizada estadísticamente acerca de
+ propiedades físicas y estructurales de dichas conformaciones.
+ Como fuente de datos se ulilizaron secuencias relativamente grandes (alrededor
+ de 200 aminiácidos) que fueron simuladas con un método conocido como Probabilis
+tic Roadmap Method.
+ Las trayectorías de la simulación son cortas porque no son tan detalladas
+ como otros métodos (Dinámica Molecular, por ejemplo).
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En el trabajo de rasgos conformacionales se encontró que las proteínas analizada
+s en la trayectoria pasan por 4 estados en todo el proceso, cada uno con
+ caracteísticas específicas que permite realizar la asociación de cada conformac
+ión en la trayectoría a uno de esos cuatro estados.
+ La pregunta que surge al observar los resultados es si este número de estados
+ es algo que se puede considerar fijo para todas las proteínas, o si por
+ el contrario, es algo específico al tipo de proteínas que se analizaron
+ en el momento.
+ Que distintas proteínas se comporten distinto en cuanto a los estados observabl
+es en su plegamiento es importante porque puede ser un aspecto relevante
+ a tener en cuenta en el diseño de nuevos algoritmos de predicción de estructura
+ terciara, de manera que puedan comportarse de manera distinta de acuerdo
+ al tipo de proteína que se esté evaluando.
+ Sin embargo, el calculo de las propiedades que se requieren para obtener
+ los puntajes de plegamiento pueden ser extensos si se trabaja con simulaciones
+ de varios microsegundos, las cuales pueden constar de millones de archivos
+ de secuencias de proteínas.
+ Actualmente dichas trayectorías son más fáciles de obtener que antes, especialm
+ente con la aparición de supercomputadores especialmente diseñados para
+ ejecutar simulaciones de plegamiento de proteínas.
+ De esta manera, se hace nesesario indagar acerca de nuevas técnicas que
+ nos permitan la manipulación de grandes cantidades de datos de simulaciones,
+ con la limitación de la capacidad con la que cuentan los sistemas de cómputo
+ que tenemos al alcance.
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+Para reducir estas trayectorias los métodos actuales buscan conjuntos de
+ conformaciones representativas, que generalmente utilizan métodos de agrupamien
+to donde se construye una matriz con las distancias entre cada una de las
+ conformaciones, usualmente se usa la distancia conocida como RMSD o 
+\emph on
+Root Mean Square-Deviation
+\emph default
+.
+ Estos agrupamientos se vuelven muy costosos en tiempo y recursos computacionale
+s cuando se trata de muchas conformaciones y por esta razón los algoritmos
+ buscan simplificar estos costos, como por ejemplo, reducir el número de
+ átomos que comparar en las conformaciones (solo carbonos alfa).
+ 
+\end_layout
+
+\begin_layout Standard
+Otra forma de reducir estas trayectorias es crear agrupamientos rápidos
+ que no tengan que comparar todas las conformaciones, parecido a lo que
+ realiza el algoritmo de Hobohm&Sander 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hobohm1992"
+literal "true"
+
+\end_inset
+
+ para comparar secuencias de ADN.
+ En este trabajo presentamos un algoritmo rápido para reducción de trayectorias
+ de plegamiento de proteínas que toma como base la idea del algoritmo de
+ Hobohm&Sander y que se basa en tres estrategias: primero una partición
+ de la trayectoria en múltiples secciones; segundo, una reducción local
+ muy rápida sobre cada una de ellas que aprovecha el tiempo de ocurrencia
+ de las conformaciones; y tercero, una reducción global que busca encontrar
+ las conformaciones más representativas de cada partición.
+ Estas tres estrategias permiten que este algoritmo sea fácilmente paralelizable
+, obtenga unos resultados previos de forma rápida, y de esos resultados
+ seleccione los más importantes.
+\end_layout
+
+\begin_layout Standard
+Nuestro enfoque trabaja sobre las trayectorias de plegamiento ya realizadas
+ y disponibles como un conjunto de snapshots a determinado 
+\emph on
+time step 
+\emph default
+y sobre estás realiza la selección de las más representativas por segmentos
+ de tiempo que se ingresan como parámetros.
+ El resultado es otra trayectoría con estructuras que representan de forma
+ resumida la trayectoria original y que contiene los eventos o estructuras
+ principales.
+ El algoritmo se puede ajustar con diferentes parámetros para definir el
+ tamaño de las particiones en número de conformaciones y número de representativ
+as por cada partición, por ejemplo se puede definir que cada 1000 conformaciones
+ se seleccionen 500 representativas, lo que reduce a la mitad el número
+ de conformaciones, o cada 10000 conformaciones se seleccionen 100, lo que
+ la reduce a la trayectoria en 99%.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En este trabajo presentamos el análisis de las trayectorias de simulación
+ de plegamiento de proteínas de Anton, un supercomputador especialmente
+ diseñado para simulaciones de dinámica molecular, con los conceptos definidos
+ en el trabajo de rasgos conformacionales.
+ Para ello creamos un algoritmo para reducir trayectorias, inspirado en
+ uno existente usado para reducción en secuencias de ADN.
+ Creamos un pipeline con los las herramientas del framework del trabajo
+ citado y aplicamos el pipeline a las trayectorias reducidas.
+ Con esto pudimos obtener los estados por los que pasan dichas proteínas,
+ y los resultados fueron diferentes a los del trabajo previo al no encontrar
+ cuatro estados sino dos, lo que coincide con la bibliografía para este
+ tipo de proteínas que son más pequeñas.
+ El pipeline se despliega en una aplicación virtual lo que facilita el uso
+ de la aplicación al independizarlo de un sistema operativo específico.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El siguiente trabajo se divide en varios capítulos.
+ Primero se presentan los principales conceptos relacionados con el plegamiento
+ de proteínas y algunas de las aproximaciones computacionales más utilizadas
+ en este campo.
+ Luego se muestra el estado del arte enfocandose principalmente en los principal
+es aspectos del trabajo de sobre rasgos conformacionales.
+ Después se describen las trayectorias usadas como datos y los métodos para
+ analizarlos.
+ Seguidamente se detalla el tookit utilizado para el cálculo de las propiedades
+ de las proteínas.
+ Luego se muestran los resultados obtenidos y por último se presentan las
+ conclusiones a las que se llegaron.
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,302 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ../ubcthesis
+\use_default_options true
+\master ../root.lyx
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Resultados
+\end_layout
+
+\begin_layout Standard
+Los resultados de aplicar las definiciones anteriores a una trayectoria
+ de Anton es presentada en la figura 
+\lang english
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:-Niveles-de-plegamiento"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Dicha figura muestra los niveles de plegado para las conformaciones de
+ la trayectoria simulada de la villina 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LindorffShaw11"
+literal "false"
+
+\end_inset
+
+.
+ El comportamiento de plegado que se observa es que la ruta de plegamiento
+ comienza con un nivel desplegado y durante ese nivel la proteína presenta
+ muchos saltos correspondientes a eventos de plegado en los que los elementos
+ estructurales pueden aparecer y desaparecer tratando de alcanzar estados
+ más estables, pero de repente el plegado alcanza el estado de plegado.
+ Las conformaciones con un bajo grado de plegado se encuentran en los pasos
+ iniciales de plegado, y las con un alto grado se encuentran en los pasos
+ finales de plegado.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset Graphics
+	filename ../../../Downloads/05-Features/images/ICF-property-plot-villin-anton-selected.pdf
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\lang english
+Niveles de plegamiento de la trayectoria de la proteína de la vilina.
+\end_layout
+
+\end_inset
+
+
+\lang english
+ 
+\series bold
+Niveles de plegamiento de la trayectoria de la proteína de la vilina.
+ 
+\series default
+\size scriptsize
+Conformaciones organizadas a lo largo del eje x, de la manera en la que
+ aparecen en su ruta de plegamiento.
+ Niveles desplegados en la ruta inicial (Paso de plegamiento < 8000 μs)
+ y niveles plegados en los pasos finales de la ruta (pasos de plegamiento
+ > 8000 μs) .
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:-Niveles-de-plegamiento"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Este comportamiento es interesante ya que el modelo de la dinámica de los
+ niveles de plegado captura que sólo hay dos estados con alta probabilidad:
+ el desplegado y el plegado.
+ Este comportamiento es muy diferente al encontrado en la obra de Luis Garreta,
+ ya que en su análisis encontró caminos con conformaciones en cuatro estados:
+ desplegado, intermedio temprano y tardío, y plegado como se muestra en
+ la siguiente figura.
+ (Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Pathway-with-four-folding-levels"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Graphics
+	filename ../../../Downloads/05-Features/images/ICF-property-plot-1BDD-p0-selected.pdf
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\lang english
+Niveles de plegamiento para una ruta de 4 estados
+\end_layout
+
+\end_inset
+
+
+\series bold
+\lang english
+Niveles de plegamiento para una ruta de 4 estados.
+ 
+\series default
+El gráfico muestra que el plegado comienza en el estado de despliegue, y
+ después de pasar por niveles intermedios de plegado, alcanza el estado
+ plegado.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Pathway-with-four-folding-levels"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+La aparición de dos estados en el plegamiento de proteínas ya ha sido reportado
+ anteriormente en la literatura
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zwanzig148,readmissiona2016,BAKK20002722"
+literal "false"
+
+\end_inset
+
+.
+ Esto significa que para dichas proteínas, las transición del estado desplegado
+ al nativo ocurre de manera más bien directa, sin la aparación de intermedios.
+\end_layout
+
+\end_body
+\end_document
