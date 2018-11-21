@@ -132,7 +132,7 @@ literal "false"
 \end_inset
 
 .
- Básicamente, se trata de endender como una proteína, partiendo de una secuencia
+ Básicamente, se trata de entender como una proteína, partiendo de una secuencia
  lineal de aminoácidos, logra plegarse rápidamente para tomar una forma
  tridimensional específica que determina su función
 \begin_inset CommandInset citation
@@ -167,8 +167,8 @@ r estados de plegamiento en diversas simulaciones de plegamiento de proteínas.
  (trayectoria) y calcular que tan plegada o desplegada se encuentra, usando
  para esto la información obtenida y analizada estadísticamente acerca de
  propiedades físicas y estructurales de dichas conformaciones.
- Como fuente de datos se ulilizaron trayectorias de plegamiento cortas (200~500
- conformaciones) de protéinas relativamente grandes (alrededor de 200 amonoácido
+ Como fuente de datos se utilizaron trayectorias de plegamiento cortas (200~500
+ conformaciones) de protéinas relativamente grandes (alrededor de 200 aminoácido
 s) que fueron simuladas con el método conocido como Probabilistic Roadmap
  Method
 \begin_inset CommandInset citation
@@ -179,7 +179,7 @@ literal "false"
 \end_inset
 
 .
- Estas proteínas y sus trayectorías se diferencian completamente de las
+ Estas proteínas y sus trayectorias se diferencian completamente de las
  que usamos en esta tesis ya que primero, son simuladas con Dinámica Molecular
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -199,8 +199,8 @@ literal "false"
 \begin_layout Standard
 En el trabajo de rasgos conformacionales se encontró que las proteínas analizada
 s en la trayectoria pasan por 4 estados en todo el proceso, cada uno con
- caracteísticas específicas que permite realizar la asociación de cada conformac
-ión en la trayectoría a uno de esos cuatro estados.
+ características específicas que permite realizar la asociación de cada
+ conformación en la trayectoria a uno de esos cuatro estados.
  La pregunta que surge al observar los resultados es si este número de estados
  es algo que se puede considerar fijo para todas las proteínas, o si por
  el contrario, es algo específico al tipo de proteínas que se analizaron
@@ -214,10 +214,10 @@ es en su plegamiento es importante porque puede ser un aspecto relevante
  los puntajes de plegamiento pueden ser extensos si se trabaja con simulaciones
  de varios microsegundos, las cuales pueden constar de millones de archivos
  de secuencias de proteínas.
- Actualmente dichas trayectorías son más fáciles de obtener que antes, especialm
+ Actualmente dichas trayectorias son más fáciles de obtener que antes, especialm
 ente con la aparición de supercomputadores especialmente diseñados para
  ejecutar simulaciones de plegamiento de proteínas.
- De esta manera, se hace nesesario indagar acerca de nuevas técnicas que
+ De esta manera, se hace necesario indagar acerca de nuevas técnicas que
  nos permitan la manipulación de grandes cantidades de datos de simulaciones,
  con la limitación de la capacidad con la que cuentan los sistemas de cómputo
  que tenemos al alcance.
@@ -283,7 +283,7 @@ time step
 \emph default
 y sobre estás realiza la selección de las más representativas por segmentos
  de tiempo que se ingresan como parámetros.
- El resultado es otra trayectoría con estructuras que representan de forma
+ El resultado es otra trayectoria con estructuras que representan de forma
  resumida la trayectoria original y que contiene los eventos o estructuras
  principales.
  El algoritmo se puede ajustar con diferentes parámetros para definir el
@@ -306,13 +306,21 @@ En este trabajo presentamos el análisis de las trayectorias de simulación
  Para ello creamos un algoritmo para reducir trayectorias, inspirado en
  uno existente usado para reducción en secuencias de ADN.
  Creamos un pipeline con los las herramientas del framework del trabajo
- citado y aplicamos el pipeline a las trayectorias reducidas.
+ citado y aplicamos el 
+\emph on
+pipeline
+\emph default
+ a las trayectorias reducidas.
  Con esto pudimos obtener los estados por los que pasan dichas proteínas,
  y los resultados fueron diferentes a los del trabajo previo al no encontrar
  cuatro estados sino dos, lo que coincide con la bibliografía para este
  tipo de proteínas que son más pequeñas.
- El pipeline se despliega en una aplicación virtual lo que facilita el uso
- de la aplicación al independizarlo de un sistema operativo específico.
+ El 
+\emph on
+pipeline
+\emph default
+ se despliega en una aplicación virtual lo que facilita el uso de la aplicación
+ al independizarlo de un sistema operativo específico.
 \begin_inset Newline newline
 \end_inset
 
@@ -324,7 +332,7 @@ El siguiente trabajo se divide en varios capítulos.
  Primero se presentan los principales conceptos relacionados con el plegamiento
  de proteínas y algunas de las aproximaciones computacionales más utilizadas
  en este campo.
- Luego se muestra el estado del arte enfocandose principalmente en los principal
+ Luego se muestra el estado del arte enfocándose principalmente en los principal
 es aspectos del trabajo de sobre rasgos conformacionales.
  Después se describen las trayectorias usadas como datos y los métodos para
  analizarlos.

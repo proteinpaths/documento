@@ -135,8 +135,12 @@ literal "false"
 \begin_layout Standard
 Anton es un supercomputador especializado que acelera enormemente la ejecución
  de simulaciones de dinámica molecular.
- Además de las adaptaciones en hardware, el grupo que desarrolló dicho computado
-r también modificó el campo de fuerza CHARMM para usarlo en dichas simulaciones
+ Además de las adaptaciones en 
+\emph on
+hardware
+\emph default
+, el grupo que desarrolló dicho computador también modificó el campo de
+ fuerza CHARMM para usarlo en dichas simulaciones
 \begin_inset CommandInset citation
 LatexCommand cite
 key "LindorffShaw11"
@@ -148,14 +152,17 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-De simulaciones realizadas en el super computador Anton obtuvimos una serie
+De simulaciones realizadas en el súper computador Anton obtuvimos una serie
  de trayectorias de simulaciones de proteínas.
- Estas trayectorias correponden a una secuencia de estados intermedios que
- la proteína sigue para pasar del estado no plegado al estado plegado o
- nativo.
+ Estas trayectorias corresponden a una secuencia de estados intermedios
+ que la proteína sigue para pasar del estado no plegado al estado plegado
+ o nativo.
  Una proteína puede tener más de un camino o ruta de plegamiento, siendo
- cada ruta una serie de estructuras 3D o conformaciones (snapshots) de la
- proteína.
+ cada ruta una serie de estructuras 3D o conformaciones (
+\emph on
+snapshots
+\emph default
+) de la proteína.
 \end_layout
 
 \begin_layout Standard
@@ -900,7 +907,7 @@ El índice Silhouette
 \begin_inset Formula $Si$
 \end_inset
 
- para la pconformación de proteína 
+ para la conformación de proteína 
 \emph on
 i 
 \emph default

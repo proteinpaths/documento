@@ -820,7 +820,7 @@ literal "true"
 .
  DM lleva la traza de las posiciones y las velocidades de los átomos de
  la proteína y como interactúan entre ellos y responden a fuerzas externas.
- DM calcula el movimiento de todas las partículas de las proteínas intergrando
+ DM calcula el movimiento de todas las partículas de las proteínas integrando
  numéricamente las ecuaciones de movimiento de Newton de manera simultánea
  y repetidamente en pequeños pasos de tiempo durante un periodo determinado.
  La ecuación en su forma más simplista establece que:
@@ -847,7 +847,7 @@ donde la fuerza en un átomo dado depende de las interacciones con todos
  que describan las interacciones entre las partículas de un sistema y retornen
  su energía potencial como función de sus conformaciones.
  Si bien DM produce simulaciones físicamente realísticas, es computacionalmente
- costoso y solamente se pueden simular proteínas pequeñas en tiempos factibiles,
+ costoso y solamente se pueden simular proteínas pequeñas en tiempos factibles,
  convirtiéndose de esta manera en un desafío computacional la simulación
  de proteínas más grandes en escalas de milisegundos 
 \begin_inset CommandInset citation
@@ -887,7 +887,7 @@ ciegas
 \begin_inset Quotes crd
 \end_inset
 
- de proteínas recientemente resueltas pero sin publicar, convirtiendose
+ de proteínas recientemente resueltas pero sin publicar, convirtiéndose
  así en una medida del estado del arte en modelamiento de estructuras de
  proteínas a partir de su secuencia de aminoácidos
 \begin_inset CommandInset citation
@@ -901,7 +901,7 @@ literal "false"
  Con esto se puede decir que los métodos de comparación de estructuras han
  estado en desarrollo activo y se han usado en el campo de la modelación
  computacional específicamente para medir la calidad de los modelos predichos.
- Sin embargo, aunque estos modelos fueron originalmente desarollados para
+ Sin embargo, aunque estos modelos fueron originalmente desarrollados para
  evaluar estos modelos simulados, ahora su aplicación se extiende además
  a la identificación, evaluación, entendimiento y predicción de cambios
  conformacionales en proteínas, siendo esto un punto clave en su funcionamiento
@@ -929,13 +929,17 @@ RMSD
 
 \begin_layout Standard
 La medida RMSD (Root Mean Square Deviation) es la medida cuantitativa de
- similitud entre dos coordenadas atomicas superpuestas más usada comunmente.
- Esta medida puede ser calculada para cualquier tipo y subset de atomos.
- Un uso común es calcualr el RMSD sobre los carbonos alfa (Cα), lo que reduce
+ similitud entre dos coordenadas atómicas superpuestas más usada comúnmente.
+ Esta medida puede ser calculada para cualquier tipo y 
+\emph on
+subset
+\emph default
+ de átomos.
+ Un uso común es calcular el RMSD sobre los carbonos alfa (Cα), lo que reduce
  la cantidad de cálculos a realizar.
  Una de las desventajas de RMSD radica en que es muy sensible a los errores.
- Incluso si dos estructuras son casi identicas excepto un tramo, la superimposic
-ión de las estrucutras no puede ser realizada de la manera más efectiva
+ Incluso si dos estructuras son casi idénticas excepto un tramo, la superimposic
+ión de las estructuras no puede ser realizada de la manera más efectiva
  por el algoritmo que optimiza el RMSD global.
 \end_layout
 

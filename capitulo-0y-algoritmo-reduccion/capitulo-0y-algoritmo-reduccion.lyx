@@ -176,7 +176,7 @@ literal "false"
 nMDS)
 \emph default
  para obtener una representación reducida 2D de toda la trayectoria.
- Inicialmente transforman la estructura 3D de la proteina a sus respectivos
+ Inicialmente transforman la estructura 3D de la proteína a sus respectivos
  ángulos dihédricos para luego aplicarles el método de escalamiento y obtener
  un conjunto de puntos que representa las estructuras de proteínas.
  Estos puntos se despliegan sobre un espacio métrico (generalmente 2D) que
@@ -216,7 +216,7 @@ literal "false"
 n más concisa.
  Sin embargo, la reducción cambia sustancialmente los elementos de la trayectori
 a al trasladar las estructuras 3D a representaciones 2D, perdiendo información
- implicita en la estructura.
+ implícita en la estructura.
 \end_layout
 
 \begin_layout Subsection
@@ -313,12 +313,15 @@ cite{HuardWood06}
 \end_inset
 
 .
- Sin embargo, en los últimos años los avances en el hardware han logrado
- avances de tal manera que se empiezan a mostrar resultados de simulaciones
- mucho más largas y de proteínas más grandes.
+ Sin embargo, en los últimos años los avances en el 
+\emph on
+hardware
+\emph default
+ han logrado avances de tal manera que se empiezan a mostrar resultados
+ de simulaciones mucho más largas y de proteínas más grandes.
  Dos ejemplos de estos avances son los proyectos de folding@home y de la
  supercomputadora Anton.
- El proyecto foldin@home logró realizar hace algunos años una de las primeras
+ El proyecto folding@home logró realizar hace algunos años una de las primeras
  simulaciones largas utilizando computación distribuida.
  Una de sus simulaciones alcanzó el orden de los microsegundos para plegar
  completamente una proteína pequeña, la Villin Headpiece de 36 residuos
@@ -381,7 +384,7 @@ nte, luego se toma la primera secuencia (la más larga) como representativa
  dos secuencias de más o menos de igual longitud tienen mayor probabilidad
  de ser similares que dos secuencias de longitudes completamente diferentes.
  Sin embargo en estructuras tridimensionales de proteínas que pertenecen
- a una misma trayectoria, la longitud y la similaridad de la secuencia va
+ a una misma trayectoria, la longitud y la similitud de la secuencia va
  a ser la misma para todas la conformaciones, lo que implica redefinir estos
  aspectos en términos de las características de las estructuras 3D de proteínas
  de una misma trayectoria, como vamos a describir más adelante cuando mostremos
@@ -465,8 +468,8 @@ bins.
 \emph on
 bin
 \emph default
- y se crea una matriz de similaridades que se la usa para realizar un agrupamien
-to para seleccionar las 
+ y se crea una matriz de similitud que se la usa para realizar un agrupamiento
+ para seleccionar las 
 \emph on
 K
 \emph default

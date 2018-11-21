@@ -106,7 +106,7 @@ K
 \begin_layout Standard
 Usamos la métrica de TM-score en vez del RMSD para comparar las estructuras
  de proteínas.
- Aunque tradicionalemente se ha usado el RMSD, se conoce muy bien que esta
+ Aunque tradicionalmente se ha usado el RMSD, se conoce muy bien que esta
  métrica es muy sensible a pequeñas diferencias (grupos de átomos) entre
  las estructuras.
  Esas pequeñas diferencias dan como resultado grandes valores de RMSD que
@@ -128,11 +128,9 @@ La implementación del algoritmo se realizó en el lenguaje R y Fortran para
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 En este trabajo se pudo observar que es posible la aplicación de técnicas
  usadas para reducción de secuencias de ADN en la reducción de secuencias
- de proteínas, lo que provee un mecanismo útil a la hora de manerjar grandes
+ de proteínas, lo que provee un mecanismo útil a la hora de manejar grandes
  cantidades de información como es el caso de las trayectorias de simulaciones
  de plegamiento de proteínas al ofrecer un subconjunto de la población total
  que resulta significativo en cuanto a las características de las trayectorias
@@ -156,9 +154,7 @@ En este trabajo se pudo observar que es posible la aplicación de técnicas
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-Pudimos comprobar además que el uso de aplicaciónes virtuales es muy util
+Pudimos comprobar además que el uso de aplicaciones virtuales es muy útil
  sobre todo en el campo de la bioinformática.
  Esto porque muchas veces se tienen funcionalidades que son codificadas
  en distintos lenguajes de programación que pueden ser dependientes en su

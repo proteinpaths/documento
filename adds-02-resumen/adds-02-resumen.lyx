@@ -82,19 +82,19 @@
 Esta tesis toma como referencia los conceptos creados en un trabajo anterior
  sobre análisis de trayectorias de plegamiento de proteínas que concluye
  sobre la presencia de estados intermedios durante su plegamiento.
- Con estos conceptos analizamos aquí trajectorias grandes de plegamiento
+ Con estos conceptos analizamos aquí trayectorias grandes de plegamiento
  de proteínas simuladas con Dinámica Molecular que generalmente contienen
  una inmensa cantidad de conformaciones que dificultan de gran manera su
- análsis y la manera de obtener información útil de las mismas.
- Para solucionar esto, creamos aqúi un algoritmo que permite reducir sustancialm
-ente el número de conformaciones de una trayectoría y así obtener una muestra
+ análisis y la manera de obtener información útil de las mismas.
+ Para solucionar esto, creamos aquí un algoritmo que permite reducir sustancialm
+ente el número de conformaciones de una trayectoria y así obtener una muestra
  representativa de la misma enfocándose principalmente en preservar la dinámica
  de la trayectoria original en cuanto a los eventos principales y la relación
  de tiempo entre las conformaciones.
- Utilizando este algoritmo realizamos la reducción de algunas de las trayectoría
+ Utilizando este algoritmo realizamos la reducción de algunas de las trayectoria
 s simuladas por la supercomputador Anton, especializada para simulaciones
  de Dinámica Molecular, y construimos un flujo de trabajo para analizar
- estas trajectorias de acuerdo a los conceptos definidos en el trabajo de
+ estas trayectorias de acuerdo a los conceptos definidos en el trabajo de
  referencia.
  Los resultados nos mostraron que los estados intermedios encontrados en
  el trabajo de referencia no están presentas en el plegamiento de estas

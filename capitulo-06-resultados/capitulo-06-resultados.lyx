@@ -97,6 +97,8 @@ noprefix "false"
 \end_inset
 
 .
+
+\lang spanish
  Dicha figura muestra los niveles de plegado para las conformaciones de
  la trayectoria simulada de la villina 
 \begin_inset CommandInset citation
@@ -116,6 +118,8 @@ literal "false"
  iniciales de plegado, y las con un alto grado se encuentran en los pasos
  finales de plegado.
  
+\lang english
+
 \begin_inset Newline newline
 \end_inset
 
@@ -193,8 +197,6 @@ name "fig:-Niveles-de-plegamiento"
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Este comportamiento es interesante ya que el modelo de la dinámica de los
  niveles de plegado captura que sólo hay dos estados con alta probabilidad:
  el desplegado y el plegado.
@@ -202,6 +204,8 @@ Este comportamiento es interesante ya que el modelo de la dinámica de los
  ya que en su análisis encontró caminos con conformaciones en cuatro estados:
  desplegado, intermedio temprano y tardío, y plegado como se muestra en
  la siguiente figura.
+
+\lang english
  (Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -285,8 +289,6 @@ name "fig:Pathway-with-four-folding-levels"
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 La aparición de dos estados en el plegamiento de proteínas ya ha sido reportado
  anteriormente en la literatura
 \begin_inset CommandInset citation
@@ -298,7 +300,7 @@ literal "false"
 
 .
  Esto significa que para dichas proteínas, las transición del estado desplegado
- al nativo ocurre de manera más bien directa, sin la aparación de intermedios.
+ al nativo ocurre de manera más bien directa, sin la aparición de intermedios.
 \end_layout
 
 \end_body

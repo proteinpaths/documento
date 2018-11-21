@@ -115,9 +115,9 @@ literal "false"
 \end_inset
 
  que corresponden a trayectorias de plegamiento cortas (200~500 conformaciones)
- de protéinas relativamente grandes (alrededor de 200 amonoácidos).
+ de proteínas relativamente grandes (alrededor de 200 amonoácidos).
  En cambio, en la presente tesis se extiende el análisis a proteínas y trayector
-ías completamente diferentes ya que primero, son simuladas con Dinámica
+ias completamente diferentes ya que primero, son simuladas con Dinámica
  Molecular
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -128,7 +128,7 @@ literal "false"
 
 ; segundo, son trayectorias muy largas (32000 a más de 1 millón de conformacione
 s); y tercero corresponden a proteínas pequeñas (30~100) aminoácidos.
- Además, por las características de estas nuevas trayectorías, aplicamos
+ Además, por las características de estas nuevas trayectorias, aplicamos
  sobre ellas un algoritmo propio de reducción de datos para poderlas analizar.
 \end_layout
 
@@ -1834,7 +1834,7 @@ local root-mean square deviation
 
 \begin_layout Standard
 Se calcula extrayendo las posiciones de los aminoácidos de los SSEs desde
- la primera conformación (la eferencia), usando el programa DSSP
+ la primera conformación (la referencia), usando el programa DSSP
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Sander83"
@@ -1867,7 +1867,7 @@ i
  j
 \emph default
  la conformación objetivo .
- S es el número de EESs en la estrucutra referencia.
+ S es el número de EESs en la estructura referencia.
  
 \begin_inset Formula $RMSD(i_{s},j_{s})$
 \end_inset
@@ -2004,7 +2004,11 @@ s)
  son contribuyentes esenciales para la estabilización del pliegue proteínico
  general.
  Estas estructuras son segmentos de la cadena de proteínas en los que los
- ángulos de torsión del backbone 
+ ángulos de torsión del 
+\emph on
+backbone
+\emph default
+ 
 \begin_inset Formula $\phi$
 \end_inset
 
@@ -2024,7 +2028,7 @@ residuos en estructura secundaria correcta,
 \emph default
 evalúa la proporción de residuos de una conformación objetivo que coinciden
  con en su EES con el de la nativa.
- La segunta, 
+ La segunda, 
 \emph on
 residuos en cualquier estructura secundaria
 \emph default
@@ -2334,7 +2338,7 @@ reference "figCmpFinalPCA-1"
 .b) se puede observar que hubo una asociación con tres rasgos de plegamiento
  ocultos o no medibles directamente: 
 \emph on
-estabilidad, compactibilidad, and semejanza al estado nativo
+estabilidad, compactibilidad, y semejanza al estado nativo
 \emph default
  (ver Figura 
 \begin_inset CommandInset ref

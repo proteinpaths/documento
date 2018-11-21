@@ -83,21 +83,24 @@ Aplicación Virtual
 \end_layout
 
 \begin_layout Standard
-En trabajo de rasgos conformacionales propone una serie de propiedades fìsicas
+En trabajo de rasgos conformacionales propone una serie de propiedades físicas
  y estructurales las cuales se evalúan en las proteínas, siendo estos cálculos
  el insumo para calcular el puntaje de plegamiento de la misma, y con esto,
  su clasificación en uno de los estados de plegamiento.
  Dichas herramientas se encuentran escritas en distintos lenguajes de programaci
 ón, tales como C, C++, python, R, etc.
- Todas estas funciones de evaluación de propieddes se encuentran envueltas
+ Todas estas funciones de evaluación de propiedades se encuentran envueltas
  en un programa python, estableciendo así un API que oculta las implementaciones
  particulares para estas evaluaciones.
  Esta diversidad de lenguajes hace que sea complejo la distribución de estas
  herramientas, por ejemplo por el hecho de tener que compilar para la plataforma
  en la que se desea trabajar.
- Por esto, y con el objetivo adicional de incorporar en el pipeline la reducción
- de proteínas, proponemos el uso de una aplicación virtual que empaquete
- la funcionalidad completa.
+ Por esto, y con el objetivo adicional de incorporar en el 
+\emph on
+pipeline
+\emph default
+ la reducción de proteínas, proponemos el uso de una aplicación virtual
+ que empaquete la funcionalidad completa.
 \end_layout
 
 \begin_layout Section*
@@ -108,9 +111,12 @@ Aplicaciones Virtuales
 Una aplicación virtual (virtual appliance) es un sistema pre-integrado y
  auto contenido que combina una o más aplicaciones de software con un sistema
  operativo reducido o ajustado (en este caso, una distribución liviana de
- Linux) para que la aplicación se ejecute de forma óptima sobre un hardware
- estándar (por ejemplo, máquinas con procesadores Intel) o se ejecute sobreuna
- máquina virtual (por ejemplo, VirtualBox
+ Linux) para que la aplicación se ejecute de forma óptima sobre un 
+\emph on
+hardware
+\emph default
+ estándar (por ejemplo, máquinas con procesadores Intel) o se ejecute sobre
+ una máquina virtual (por ejemplo, VirtualBox
 \begin_inset CommandInset citation
 LatexCommand cite
 key "oracle_vm_2018"
@@ -144,7 +150,7 @@ literal "false"
 
 \begin_layout Standard
 Los beneficios de las aplicaciones virtuales son muchos, entre ellos la
- facilidadde instalación y uso a través del empaquetamiento de la aplicación
+ facilidad de instalación y uso a través del empaquetamiento de la aplicación
  con el software necesario para su uso, sin necesidad de recompilar o instalar
  externamente nuevas librerías, compiladores u otras utilidades.
  
@@ -170,7 +176,11 @@ La aplicación virtual está constituida por los siguientes elementos:
 \end_layout
 
 \begin_layout Itemize
-Código fuente del pipeline.
+Código fuente del 
+\emph on
+pipeline
+\emph default
+.
  Código en C/C++, Perl y shell scripts, junto con otras herramientas propias
  para su ejecución, tales como scripts en el lenguaje Perl.
 \end_layout
