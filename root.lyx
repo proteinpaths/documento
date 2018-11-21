@@ -350,7 +350,7 @@ filename "capitulo-07-conclusiones/capitulo-07-conclusiones.lyx"
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 btprint "btPrintCited"
-bibfiles "refs/Proteins,refs/reduccion-trayectorias"
+bibfiles "refs/tesis-maestria-rasgos"
 options "plain"
 
 \end_inset
