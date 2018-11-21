@@ -100,7 +100,7 @@ Este capítulo contiene información sobre los datos de plegado de proteínas
 \end_layout
 
 \begin_layout Section
-Datos de plegamiento de proteínas
+Conjunto de Datos de plegamiento de proteínas
 \end_layout
 
 \begin_layout Standard
@@ -116,16 +116,20 @@ literal "true"
 , entre los que se destacan aquellos que ofrecen una representación a nivel
  atómico como Dinámica Molecular (DM).
  En nuestra investigación usamos un conjunto de datos de plegamiento del
- supercomputador Anton, como se detallará más adelante.
+ supercomputador Anton
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Shaw2011"
+literal "false"
+
+\end_inset
+
+, como se detallará más adelante.
  Cabe señalar que la recopilación de datos de este tipo de simulaciones
  es difícil, ya que las trayectorias y caminos resultantes no se publican
  comúnmente, y la gran cantidad de datos generados en estas simulaciones
  es difícil de almacenar y manejar.
  
-\end_layout
-
-\begin_layout Subsection
-Conjunto de Datos de Anton
 \end_layout
 
 \begin_layout Standard

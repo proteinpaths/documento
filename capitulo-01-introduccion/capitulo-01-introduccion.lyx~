@@ -180,8 +180,15 @@ literal "false"
 
 .
  Estas proteínas y sus trayectorías se diferencian completamente de las
- que usamos en esta tesis ya que primero, son simuladas con Dinámica Molecular;
- segundo, corresponden a proteínas pequeñas (30~100) aminoácidos; y tercero,
+ que usamos en esta tesis ya que primero, son simuladas con Dinámica Molecular
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Shaw2011"
+literal "false"
+
+\end_inset
+
+; segundo, corresponden a proteínas pequeñas (30~100) aminoácidos; y tercero,
  son trayectorias muy largas (32000 a más de 1 millón de conformaciones).
 \begin_inset Newline newline
 \end_inset

@@ -8,6 +8,15 @@
 \begin_preamble
 \usepackage[T1]{fontenc}
 \usepackage{charter}
+
+%\setlength{\parskip}{1em}
+%\setlength{\parskip}{0.2\baselineskip} % 0.2*line for all (begin, end, between)
+% Paragraph spacing
+%\usepackage{titlesec}
+%\setlength{\parskip}{0.2\baselineskip} % 0.2*line for all (begin, end, between)
+%\titlespacing{\section}{00}{*1}{*1}
+%\titlespacing{\subsection}{00pt}{*1}{*1}
+%\titlespacing{\subsubsection}{00pt}{*1}{*1}
 \end_preamble
 \options openany
 \use_default_options true
@@ -34,7 +43,7 @@
 \bibtex_command default
 \index_command default
 \paperfontsize default
-\spacing single
+\spacing onehalf
 \use_hyperref true
 \pdf_bookmarks true
 \pdf_bookmarksnumbered false
@@ -46,7 +55,7 @@
 \pdf_backref false
 \pdf_pdfusetitle true
 \papersize default
-\use_geometry false
+\use_geometry true
 \use_package amsmath 1
 \use_package amssymb 1
 \use_package cancel 1
@@ -71,6 +80,8 @@
 \shortcut idx
 \color #008000
 \end_index
+\leftmargin 4cm
+\rightmargin 4cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent

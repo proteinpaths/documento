@@ -428,25 +428,6 @@ Algoritmo de Reducción de Trayectorias de Plegamiento
 \end_layout
 
 \begin_layout Standard
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
-status open
-
-\begin_layout Plain Layout
 La primera parte del algoritmo realiza un agrupamiento local rápido donde
  se aprovecha el ordenamiento temporal de las conformaciones implícito en
  la trayectoria.
@@ -512,7 +493,7 @@ K
  su tiempo original de simulación.
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 \begin_inset Note Note
 status collapsed
 
@@ -706,11 +687,6 @@ bins,
 \end_layout
 
 \end_deeper
-\end_inset
-
-
-\end_layout
-
 \end_inset
 
 
