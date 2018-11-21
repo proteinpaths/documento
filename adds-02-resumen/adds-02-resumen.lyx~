@@ -80,8 +80,8 @@
 
 \begin_layout Standard
 Esta tesis toma como referencia los conceptos creados en un trabajo anterior
- sobre análisis de conformaciones de proteínas que concluye sobre la presencia
- de estados intermedios presentes en el plegamiento de las proteínas.
+ sobre análisis de trayectorias de plegamiento de proteínas que concluye
+ sobre la presencia de estados intermedios durante el plegamiento.
  Con estos conceptos analizamos aquí trajectorias grandes de plegamiento
  de proteínas simuladas con Dinámica Molecular que generalmente contienen
  una inmensa cantidad de conformaciones que dificultan de gran manera su
