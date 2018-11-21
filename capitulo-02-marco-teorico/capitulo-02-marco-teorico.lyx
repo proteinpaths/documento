@@ -869,19 +869,6 @@ literal "true"
  
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Comment
-status open
-
-\begin_layout Plain Layout
-Esta es agregada del paper de reduccion
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Section
 Métodos de Comparación de Estructuras de Proteínas
 \end_layout

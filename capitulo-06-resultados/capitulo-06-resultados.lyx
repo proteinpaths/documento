@@ -258,10 +258,13 @@ Niveles de plegamiento para una ruta de 4 estados
 Niveles de plegamiento para una ruta de 4 estados.
  
 \series default
+\size scriptsize
 El gráfico muestra que el plegado comienza en el estado de despliegue, y
  después de pasar por niveles intermedios de plegado, alcanza el estado
  plegado.
  
+\size default
+
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Pathway-with-four-folding-levels"

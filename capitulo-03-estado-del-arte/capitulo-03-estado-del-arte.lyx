@@ -1644,19 +1644,7 @@ literal "true"
 
 .
  Dos tipos de sondas con un radio pequeño (ej.
- 0.0 Å
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\lang english
-?realmente 0.0?
-\end_layout
-
-\end_inset
-
-) y un radio grande (ej.
+ 0.0 Å) y un radio grande (ej.
  1.4 Å) se usan para detectar vacíos y delimitar las regiones accesibles
  con solventes, respectivamente.
  La sonda más grande delimita las regiones accesibles al disolvente, mientras
@@ -2307,6 +2295,7 @@ Distribución final de las propiedades de los componentes.
 Distribución final de las propiedades de los componentes.
  
 \series default
+\size scriptsize
 (a) Matriz de cargas del PCA final con las principales propiedades (alto
  peso) de cada componente.
  b) Una vista de los componentes como grupos de propiedades interrelacionadas
@@ -2442,9 +2431,12 @@ Interpretación de los componentes.
 Interpretación de los componentes.
  
 \series default
+\size scriptsize
 De acuerdo con las propiedades que se cargaron en los tres componentes se
  asociaron con tres características intrínsecas del plegamiento de proteínas:
- estabilidad, compactibilidad y semejanza al estado nativo.
+ estabilidad, compactibilidad y semejanza al estado nativo
+\size default
+.
 \begin_inset CommandInset label
 LatexCommand label
 name "figCmpInterpret"
@@ -2535,6 +2527,8 @@ Representación de los rasgos IC en términos de sus propiedades.
 
 \series bold
 Representación de los rasgos IC en términos de sus propiedades.
+
+\size scriptsize
  
 \series default
 Los tres componentes definen un espacio en 3D que se interpreta como los
@@ -2542,7 +2536,9 @@ Los tres componentes definen un espacio en 3D que se interpreta como los
  eje verde) y semejanza con el nativo (PC3, eje azul).
  Pueden ser representados por un valor numérico en términos de la distancia
  de sus propiedades físicas desde el origen (líneas de puntos) a lo largo
- del eje de la característica IC correspondiente.
+ del eje de la característica IC correspondiente
+\size default
+.
 \begin_inset CommandInset label
 LatexCommand label
 name "figCmpPca3d"
