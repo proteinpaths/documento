@@ -2217,13 +2217,6 @@ literal "true"
 
 \begin_layout Section
 Definiciones asociadas a Rasgos de Proteínas
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Definiciones-asociadas"
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard

@@ -320,16 +320,6 @@ filename "capitulo-0y-algoritmo-reduccion/capitulo-0y-algoritmo-reduccion.lyx"
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand input
-filename "capitulo-0x-aplicacion-virtual/capitulo-0x-aplicacion-virtual.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
 filename "capitulo-05-toolkit/capitulo-05-toolkit.lyx"
 
 \end_inset

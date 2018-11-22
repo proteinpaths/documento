@@ -1408,16 +1408,6 @@ es que da como resultado una nueva tabla con los 3 componentes asociados
  a los tres rasgos conformacionales, donde cada rasgo representa un subconjunto
  de propiedades de las proteínas con sus repectivos pesos ponderados, para
  mas detalles ver las definiciones de la sección 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Definiciones-asociadas"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Section

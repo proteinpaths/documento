@@ -799,6 +799,180 @@ literal "true"
 \end_layout
 
 \begin_layout Section
+Detalles de Implementación
+\end_layout
+
+\begin_layout Subsection
+Descripción de Programas
+\end_layout
+
+\begin_layout Standard
+El algoritmo está implementado a través de tres scripts: 
+\end_layout
+
+\begin_layout Itemize
+pr00_main.py: Script principal en lenguaje Python que toma los parámetros
+ iniciales y llama a los otros scripts enviándoles los parámetros necesarios.
+\end_layout
+
+\begin_layout Itemize
+pr01_createBins.py: Script en lenguaje Python que realiza las particiones
+\end_layout
+
+\begin_layout Itemize
+pr02_localReduction.R : Script en lenguaje R que realiza la reducción local.
+\end_layout
+
+\begin_layout Itemize
+pr03_globalReduction.R: Script en lenguaje R que realiza la reducción global.
+\end_layout
+
+\begin_layout Subsection
+Ejecución
+\end_layout
+
+\begin_layout Standard
+La ejecución se realiza llamando al script 
+\emph on
+reduction.py 
+\emph default
+así:
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+$ ./reduction.py <InputDir> <Ouputdir> <BinSize> <Threshold> <K> <nCores>
+\end_layout
+
+\begin_layout Standard
+Donde:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Input
+\begin_inset space ~
+\end_inset
+
+Dir:
+\series default
+ Nombre del directorio de entrada donde están las conformaciones de la trayector
+ía de la proteína a reducir.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Output
+\begin_inset space ~
+\end_inset
+
+Dir: 
+\series default
+Nombre del directorio donde quedarán los resultados de la reducción.
+ Si el directorio ya existe lo renombra automáticamente y crea uno nuevo.
+ Dentro del directorio se crean cuatro subdirectorios:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+bins: donde se crean las particiones con las conformaciones correspondientes
+ a cada bin
+\end_layout
+
+\begin_layout Itemize
+binsLocal: donde se crean las nuevas particiones con los resultados de la
+ reducción local
+\end_layout
+
+\begin_layout Itemize
+pdbsLocal donde se copian todas las conformaciones de la nueva trayectoria
+ producto de la reducción local.
+\end_layout
+
+\begin_layout Itemize
+pdbsGlobal: donde se copian todas las conformaciones de la nueva trayectoria
+ producto de la reducción global.
+\end_layout
+
+\begin_layout Itemize
+tmp: donde se coloca los archivos temporales resultantes de la creación
+ de las matrices de distancia con TM-score
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Bin
+\begin_inset space ~
+\end_inset
+
+Size:
+\series default
+ El tamaño de conformaciones por partición o 
+\emph on
+bin.
+
+\emph default
+ El algoritmo crea el número de 
+\emph on
+bins 
+\emph default
+dependiendo del tamaño de la trayectoria.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Threshold:
+\series default
+ Umbral usado por el TM-score para comparar dos conformaciones y decidir
+ si son similares.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+K:
+\series default
+ Número de conformaciones a seleccionar por el agrupamiento global
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+nCores:
+\series default
+ Número de 
+\emph on
+cores
+\emph default
+ a utilizar para el procesamiento en paralelo.
+\end_layout
+
+\begin_layout Subsection
+Requisitos
+\end_layout
+
+\begin_layout Standard
+Los programas están en python y en R.
+ Del sistema R se necesita instalar las librería para agrupamientos y paraleliza
+ción: 
+\emph on
+cluster 
+\emph default
+y 
+\emph on
+parallel
+\emph default
+, respectivamente.
+\end_layout
+
+\begin_layout Section
 Resultados y Discusión
 \end_layout
 

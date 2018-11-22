@@ -1402,22 +1402,8 @@ Analizador de Componentes Principales
 \end_layout
 
 \begin_layout Standard
-Este programa toma como entrada una tabla de las evaluaciones de las propiedades
- realizadas a las conformaciones de proteínas y realiza un análisis de component
-es que da como resultado una nueva tabla con los 3 componentes asociados
- a los tres rasgos conformacionales, donde cada rasgo representa un subconjunto
- de propiedades de las proteínas con sus repectivos pesos ponderados, para
- mas detalles ver las definiciones de la sección 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Definiciones-asociadas"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-.
+Este programa toma como entrada las evaluaciones de las propiedades realizadas
+ a las conformaciones de proteínas y
 \end_layout
 
 \begin_layout Section
