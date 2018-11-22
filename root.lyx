@@ -348,6 +348,16 @@ filename "capitulo-07-conclusiones/capitulo-07-conclusiones.lyx"
 \end_layout
 
 \begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "capitulo-08-trabajo-futuro/capitulo-08-trabajo-futuro.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 btprint "btPrintCited"
