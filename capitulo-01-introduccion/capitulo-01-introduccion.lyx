@@ -83,9 +83,8 @@ Introducción
 \end_layout
 
 \begin_layout Standard
-En general la bioinformática se ha caracterizado por trabajar con conjuntos
- de datos voluminosos e incrementales y métodos complejos de análisis de
- datos
+La mayoría de análisis bioinformáticos se caracterizan por trabajar con
+ conjuntos de datos voluminosos y métodos complejos de análisis de datos
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Kashyap2016"
@@ -94,14 +93,11 @@ literal "false"
 \end_inset
 
 .
- Los avances tecnológicos de la actualidad han abierto muchas posibilidades,
- especialmente en el campo de la bioinformática, aumentando aún más las
- oportunidades de análisis, pero también los retos que esto conlleva.
- Diversos sistemas biológicos pueden ser analizados con gran eficiencia
- y en general a bajo costo.
- La consecuencia natural de esto es una gran cantidad de datos por procesar,
+ Los avances tecnológicos actuales han abierto muchas posibilidades de obtener
+ cada día más datos biológicos y en menor tiempo, aumentando aún más las
+ oportunidades de análisis, pero también la gran cantidad de datos por procesar,
  de los cuales se espera extraer información que permita conocer más sobre
- algún proceso biológico en particular
+ algún proceso biológico en particular 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Min2017,Katal2013"
@@ -114,10 +110,6 @@ literal "false"
  de datos requiere de técnicas que hagan viable su ejecución teniendo en
  cuenta las restricciones técnicas que se tienen al ser la capacidad computacion
 al un recurso limitado.
-\begin_inset Newline newline
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -151,26 +143,38 @@ literal "false"
  cantidad de recursos computacionales, y su resolución tendría un impacto
  en el entendimiento de ciertas enfermedades y en el desarrollo de determinados
  medicamentos.
-\begin_inset Newline newline
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
 Sobre este tema, el trabajo de rasgos conformacionales desarrollado por
  Luis Garreta en el grupo de Bioinformática y Biocomputación de la Universidad
- del Valle ofrece una visión importante del proceso de plegamiento al identifica
-r estados de plegamiento en diversas simulaciones de plegamiento de proteínas.
- Ofrece además un puntaje de plegamiento que puede ser aplicado a cualquier
- conformación individual de los miles que pueden hacer parte de una simulación
- (trayectoria) y calcular que tan plegada o desplegada se encuentra, usando
- para esto la información obtenida y analizada estadísticamente acerca de
- propiedades físicas y estructurales de dichas conformaciones.
- Como fuente de datos se utilizaron trayectorias de plegamiento cortas (200~500
- conformaciones) de protéinas relativamente grandes (alrededor de 200 aminoácido
-s) que fueron simuladas con el método conocido como Probabilistic Roadmap
- Method
+ del Valle 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Garreta2015"
+literal "false"
+
+\end_inset
+
+ ofrece una visión importante del proceso de plegamiento al identificar
+ niveles o estados intermedios que la proteína puede alcanzar durante este
+ proceso.
+ Además, se brinda un marco de trabajo con definiciones, conceptos, y herramient
+as para analizar trayectorias, entre estos un puntaje de plegamiento que
+ puede ser aplicado a cualquier conformación individual de los miles que
+ hacen parte de una trayectoria y así calcular que tan plegada o desplegada
+ se encuentra, usando para esto la información obtenida y analizada estadísticam
+ente acerca de propiedades estructurales y energéticas de dichas conformaciones.
+ Entre las conclusiones de ese trabajo se encontró que las proteínas analizadas
+ en la trayectoria pasan por 4 estados en todo el proceso: inicial, intermedio
+ temprano, intermedio tardío, y plegado.
+ Cada uno con características específicas, dadas por sus propiedades, que
+ permite asociar cada conformación en una trayectoria a uno de esos cuatro
+ estados.
+ Como datos en ese trabajo se utilizó trayectorias de plegamiento cortas
+ (200~500 conformaciones) de protéinas relativamente grandes (alrededor
+ de 200 aminoácidos) que fueron simuladas con el método conocido como Probabilis
+tic Roadmap Method
 \begin_inset CommandInset citation
 LatexCommand cite
 key "AmatoSong01"
@@ -179,8 +183,12 @@ literal "false"
 \end_inset
 
 .
- Estas proteínas y sus trayectorias se diferencian completamente de las
- que usamos en esta tesis ya que primero, son simuladas con Dinámica Molecular
+\end_layout
+
+\begin_layout Standard
+Sin embargo, actualmente se están generando trayectorias de plegamiento
+ mucho más detalladas que implican millones de conformaciones para analizar
+ como las producidas por el supercomputador Anton 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Shaw2011"
@@ -188,46 +196,91 @@ literal "false"
 
 \end_inset
 
-; segundo, corresponden a proteínas pequeñas (30~100) aminoácidos; y tercero,
- son trayectorias muy largas (32000 a más de 1 millón de conformaciones).
-\begin_inset Newline newline
-\end_inset
-
-
+, diseñado especialmente para simulaciones de dinámica molecular cuyas trayector
+ias son muy diferentes a las del anterior trabajo, ya que primero, son simuladas
+ con Dinámica Molecular; segundo, corresponden a proteínas pequeñas (30~100)
+ aminoácidos; y tercero, son trayectorias muy largas (32000 a más de 1 millón
+ de conformaciones).
 \end_layout
 
 \begin_layout Standard
-En el trabajo de rasgos conformacionales se encontró que las proteínas analizada
-s en la trayectoria pasan por 4 estados en todo el proceso, cada uno con
- características específicas que permite realizar la asociación de cada
- conformación en la trayectoria a uno de esos cuatro estados.
- La pregunta que surge al observar los resultados es si este número de estados
- es algo que se puede considerar fijo para todas las proteínas, o si por
- el contrario, es algo específico al tipo de proteínas que se analizaron
- en el momento.
- Que distintas proteínas se comporten distinto en cuanto a los estados observabl
-es en su plegamiento es importante porque puede ser un aspecto relevante
+A la vista de esos nuevos datos surgen las siguientes preguntas: primero,
+ si el número de estados de plegamiento es algo que se puede considerar
+ fijo para todas las proteínas, o si por el contrario, es algo específico
+ al tipo de proteínas que se analizaron en el trabajo de Garreta; y segundo,
+ si es factible realizar este análisis en trayectorias de proteínas más
+ detalladas, como las simuladas por Anton ya que el cálculo de las propiedades
+ que se requieren para obtener los puntajes de plegamiento será muy extenso
+ al trabajar con simulaciones de varios microsegundos que tendrán miles
+ de conformaciones de estructuras de proteínas.
+ Para resolver esas preguntas se hace necesario indagar acerca de nuevas
+ técnicas que nos permitan la manipulación de grandes cantidades de datos
+ de simulaciones, con la limitación de la capacidad con la que cuentan los
+ sistemas de cómputo que tenemos al alcance.
+\end_layout
+
+\begin_layout Standard
+En esta tesis presentamos el análisis de las trayectorias de simulación
+ de plegamiento de proteínas de Anton, un supercomputador especialmente
+ diseñado para simulaciones de dinámica molecular, con los conceptos definidos
+ en el trabajo de rasgos conformacionales.
+ Para ello creamos un algoritmo para reducir trayectorias, inspirado en
+ uno existente usado para reducción en secuencias de ADN.
+ Creamos un pipeline con los las herramientas del framework del trabajo
+ citado y aplicamos el 
+\emph on
+pipeline
+\emph default
+ a las trayectorias reducidas.
+ Con esto pudimos obtener los estados por los que pasan dichas proteínas,
+ y los resultados fueron diferentes a los del trabajo previo al no encontrar
+ cuatro estados sino dos, lo que coincide con la bibliografía para este
+ tipo de proteínas que son más pequeñas.
+ El 
+\emph on
+pipeline
+\emph default
+ se despliega en una aplicación virtual lo que facilita el uso de la aplicación
+ al independizarlo de un sistema operativo específico.
+\end_layout
+
+\begin_layout Standard
+Este documento se divide en varios capítulos.
+ Primero se presentan los principales conceptos relacionados con el plegamiento
+ de proteínas y algunas de las aproximaciones computacionales más utilizadas
+ en este campo.
+ Luego se muestra el estado del arte enfocándose principalmente en los principal
+es aspectos del trabajo de sobre rasgos conformacionales.
+ Después se describen las trayectorias usadas como datos y los métodos para
+ analizarlos.
+ Seguidamente se detalla el tookit utilizado para el cálculo de las propiedades
+ de las proteínas.
+ Luego se muestran los resultados obtenidos y por último se presentan las
+ conclusiones a las que se llegaron.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Que distintas proteínas se comporten distinto en cuanto a los estados observable
+s en su plegamiento es importante porque puede ser un aspecto relevante
  a tener en cuenta en el diseño de nuevos algoritmos de predicción de estructura
  terciara, de manera que puedan comportarse de manera distinta de acuerdo
  al tipo de proteína que se esté evaluando.
- Sin embargo, el calculo de las propiedades que se requieren para obtener
- los puntajes de plegamiento pueden ser extensos si se trabaja con simulaciones
- de varios microsegundos, las cuales pueden constar de millones de archivos
- de secuencias de proteínas.
- Actualmente dichas trayectorias son más fáciles de obtener que antes, especialm
-ente con la aparición de supercomputadores especialmente diseñados para
- ejecutar simulaciones de plegamiento de proteínas.
- De esta manera, se hace necesario indagar acerca de nuevas técnicas que
- nos permitan la manipulación de grandes cantidades de datos de simulaciones,
- con la limitación de la capacidad con la que cuentan los sistemas de cómputo
- que tenemos al alcance.
-\begin_inset Newline newline
-\end_inset
-
-
 \end_layout
 
-\begin_layout Standard
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
 Para reducir estas trayectorias los métodos actuales buscan conjuntos de
  conformaciones representativas, que generalmente utilizan métodos de agrupamien
 to donde se construye una matriz con las distancias entre cada una de las
@@ -247,7 +300,7 @@ s cuando se trata de muchas conformaciones y por esta razón los algoritmos
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Otra forma de reducir estas trayectorias es crear agrupamientos rápidos
  que no tengan que comparar todas las conformaciones, parecido a lo que
  realiza el algoritmo de Hobohm&Sander 
@@ -275,7 +328,7 @@ literal "true"
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Nuestro enfoque trabaja sobre las trayectorias de plegamiento ya realizadas
  y disponibles como un conjunto de snapshots a determinado 
 \emph on
@@ -298,48 +351,9 @@ as por cada partición, por ejemplo se puede definir que cada 1000 conformacione
 
 \end_layout
 
-\begin_layout Standard
-En este trabajo presentamos el análisis de las trayectorias de simulación
- de plegamiento de proteínas de Anton, un supercomputador especialmente
- diseñado para simulaciones de dinámica molecular, con los conceptos definidos
- en el trabajo de rasgos conformacionales.
- Para ello creamos un algoritmo para reducir trayectorias, inspirado en
- uno existente usado para reducción en secuencias de ADN.
- Creamos un pipeline con los las herramientas del framework del trabajo
- citado y aplicamos el 
-\emph on
-pipeline
-\emph default
- a las trayectorias reducidas.
- Con esto pudimos obtener los estados por los que pasan dichas proteínas,
- y los resultados fueron diferentes a los del trabajo previo al no encontrar
- cuatro estados sino dos, lo que coincide con la bibliografía para este
- tipo de proteínas que son más pequeñas.
- El 
-\emph on
-pipeline
-\emph default
- se despliega en una aplicación virtual lo que facilita el uso de la aplicación
- al independizarlo de un sistema operativo específico.
-\begin_inset Newline newline
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-El siguiente trabajo se divide en varios capítulos.
- Primero se presentan los principales conceptos relacionados con el plegamiento
- de proteínas y algunas de las aproximaciones computacionales más utilizadas
- en este campo.
- Luego se muestra el estado del arte enfocándose principalmente en los principal
-es aspectos del trabajo de sobre rasgos conformacionales.
- Después se describen las trayectorias usadas como datos y los métodos para
- analizarlos.
- Seguidamente se detalla el tookit utilizado para el cálculo de las propiedades
- de las proteínas.
- Luego se muestran los resultados obtenidos y por último se presentan las
- conclusiones a las que se llegaron.
 \end_layout
 
 \end_body

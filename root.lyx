@@ -9,7 +9,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{charter}
 
-%\setlength{\parskip}{1em}
+%\setlength{\parskip}{1cm}
 %\setlength{\parskip}{0.2\baselineskip} % 0.2*line for all (begin, end, between)
 % Paragraph spacing
 %\usepackage{titlesec}
@@ -43,7 +43,7 @@
 \bibtex_command default
 \index_command default
 \paperfontsize default
-\spacing onehalf
+\spacing double
 \use_hyperref true
 \pdf_bookmarks true
 \pdf_bookmarksnumbered false
@@ -260,6 +260,22 @@ status open
 
 \backslash
 mainmatter
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%{
+\backslash
+setstretch{1.5} 
 \end_layout
 
 \end_inset

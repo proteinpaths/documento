@@ -2241,6 +2241,13 @@ literal "false"
 
 \begin_layout Subsection
 Componentes Principales asociados a las Propiedades de las Proteínas
+\begin_inset CommandInset label
+LatexCommand label
+name "defs:ComponentesPrincipales"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2469,6 +2476,13 @@ name "figCmpInterpret"
 
 \begin_layout Subsection
 Rasgos conformacionales inherentes
+\begin_inset CommandInset label
+LatexCommand label
+name "defs:RasgosConformacionales"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2641,6 +2655,13 @@ estado de plegado
 
 \begin_layout Subsection
 El puntaje de grado de plegamiento
+\begin_inset CommandInset label
+LatexCommand label
+name "def:PuntajePlegamiento"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2693,6 +2714,13 @@ ICF(c)=\frac{v_{1}*F_{1}(c)+v_{2}*F_{2}(c)+v_{3}*F_{3}(c)}{V}\label{eqCmpICFScor
 
 \begin_layout Subsection
 Medida de similitud conformacional
+\begin_inset CommandInset label
+LatexCommand label
+name "defs:Medida-de-similitud"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2752,6 +2780,13 @@ dad (CP) y semejanza con la estructura nativa (NT).
 
 \begin_layout Subsection
 Niveles de plegamiento
+\begin_inset CommandInset label
+LatexCommand label
+name "defs:NivelesPlegamiento"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2949,6 +2984,13 @@ name "fig:Distribution-folding-score"
 
 \begin_layout Subsection
 Clasificador de niveles de plegamiento
+\begin_inset CommandInset label
+LatexCommand label
+name "defs:ClasificadorNiveles"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard

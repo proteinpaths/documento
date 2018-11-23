@@ -1250,7 +1250,7 @@ pr03_globalReduction.R
 \begin_layout Standard
 La ejecución se realiza llamando al script 
 \emph on
-reduction.py 
+"reduction.py" 
 \emph default
 así:
 \end_layout
@@ -1402,12 +1402,13 @@ Analizador de Componentes Principales
 \end_layout
 
 \begin_layout Standard
-Este programa toma como entrada una tabla de las evaluaciones de las propiedades
- realizadas a las conformaciones de proteínas y realiza un análisis de component
-es que da como resultado una nueva tabla con los 3 componentes asociados
- a los tres rasgos conformacionales, donde cada rasgo representa un subconjunto
- de propiedades de las proteínas con sus repectivos pesos ponderados, para
- mas detalles ver las definiciones de la sección 
+Este programa toma como entradas las evaluaciones de las propiedades realizadas
+ a las conformaciones de proteínas, realiza un análisis de componentes,
+ y retorna como resultado para cada conformación los 3 componentes asociados
+ a los tres rasgos conformacionales.
+ Cada rasgo representa un subconjunto de propiedades de las proteínas con
+ sus repectivos pesos ponderados (mas detalle, ver definiciones de la sección
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Definiciones-asociadas"
@@ -1417,7 +1418,102 @@ noprefix "false"
 
 \end_inset
 
-.
+).
+\end_layout
+
+\begin_layout Standard
+La ejecución se realiza llamando al script 
+\emph on
+"analizer_pca.R", 
+\emph default
+asi:
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\size footnotesize
+$ ./analizer_pca.R <archivo propiedades> <archivo componentes> 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+archivo propiedades:
+\series default
+ es el archivo con las evaluaciones de las propiedades a cada conformación
+ de la trayectoria reducida.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+archivo componentes: 
+\series default
+es el archivoy donde se escriben los resultados de los componentes y sus
+ valores por cada propiedad
+\end_layout
+
+\begin_layout Section
+Analizador de Rasgos Conformacionales
+\end_layout
+
+\begin_layout Standard
+Este programa toma los valores de los componentes principales por cada proteina
+ (sección 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "defs:ComponentesPrincipales"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), los transforma a rasgos conformacionales (sección 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "defs:RasgosConformacionales"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), obtiene el puntaje de grado de plegamiento (, construye una matriz de
+ distancias utilizando la medida de similitud conformacional (, 
 \end_layout
 
 \begin_layout Section
