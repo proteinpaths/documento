@@ -356,5 +356,39 @@ as por cada partición, por ejemplo se puede definir que cada 1000 conformacione
 
 \end_layout
 
+\begin_layout Section
+Objetivo General
+\end_layout
+
+\begin_layout Standard
+Analizar los rasgos conformacionales en trayectorias de plegamiento de proteínas
+ generadas por dinámica molecular
+\end_layout
+
+\begin_layout Section
+Objetivos Específicos
+\end_layout
+
+\begin_layout Itemize
+Crear un mecanismo de reducción de trayectorias de plegamiento de proteínas.
+\end_layout
+
+\begin_layout Itemize
+Evaluar las propiedades energéticas y estructurales para las proteínas de
+ las trayectorias.
+\end_layout
+
+\begin_layout Itemize
+Obtener los rasgos conformacionales en las trayectorías reducidas.
+\end_layout
+
+\begin_layout Itemize
+Comparar los resultados con los anteriormente publicados.
+\end_layout
+
+\begin_layout Itemize
+Crear una aplicación virtual para el análisis de rasgos conformacionales.
+\end_layout
+
 \end_body
 \end_document
