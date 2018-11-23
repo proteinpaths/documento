@@ -151,6 +151,51 @@ pipeline
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imagenes/diagramaFlujoPipeline.pdf
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\series bold
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Flujo de trabajo del análisis de trayectorias de plegamiento de proteínas
+\end_layout
+
+\end_inset
+
+Flujo de trabajo del análisis de trayectorias de plegamiento de proteínas.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Los beneficios de las aplicaciones virtuales son muchos, entre ellos la
  facilidad de instalación y uso a través del empaquetamiento de la aplicación
  con el software necesario para su uso, sin necesidad de recompilar o instalar

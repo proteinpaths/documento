@@ -82,5 +82,63 @@
 Trabajo futuro
 \end_layout
 
+\begin_layout Section
+Optimización de la métrica TM-Score
+\end_layout
+
+\begin_layout Standard
+El algoritmo de reducción de proteínas que proponemos en este trabajo inicia
+ con un clustering 
+\begin_inset Quotes fld
+\end_inset
+
+rápido
+\begin_inset Quotes frd
+\end_inset
+
+ con el cual agrupamos proteínas basándose en la métrica TM-Score como medida
+ de similitud.
+ Esta métrica ofrece ventajas respecto a otras medidas como el RMSD a la
+ hora de capturar las similitudes entre proteínas.
+ En general, el algoritmo encuentra regiones comunes entre dos estructuras
+ y con ellas va calculando un puntaje de similitud.
+ Es por esta razón que el algoritmo es menos sensible a variaciones entre
+ dos proteínas, ya que las regiones no comunes no tienen el mismo impacto
+ que tendría en una comparación realizada con RMSD.
+ En esta tesis trabajamos con trayectorías de proteínas, lo que significa
+ una serie de conformaciones de proteíans de igual longitur Sin embargo,
+ la versión estándar de este algoritmo puede estar realizando cálculos muy
+ detallados que en esta etapa de agrupamiento rápido no necesitamos.
+ 
+\end_layout
+
+\begin_layout Standard
+.
+\end_layout
+
+\begin_layout Standard
+.
+\end_layout
+
+\begin_layout Standard
+.Una mejora que se puede hacer en el proceso es la modificación de la versión
+ original del algoritmo de TM-Score para que evalúe el puntaje de similitud
+ entre dos conformaciones de manera más rápida, aún si la exactitud se ve
+ disminuida.
+ La justificación de este comportamiento es que el algoritmo de reducción
+ continúa con una etapa donde realiza un clustering jerárquico más detallado.
+\end_layout
+
+\begin_layout Standard
+Para el cálculo de la similitud entre dos proteínas estamos usando la métrica
+ de TM-Score.
+\end_layout
+
+\begin_layout Standard
+- Menos sensitivo a las variaciones entre proteínas.
+ Alineamiento global.
+ s
+\end_layout
+
 \end_body
 \end_document
