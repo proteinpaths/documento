@@ -79,8 +79,6 @@
 \begin_body
 
 \begin_layout Chapter
-
-\lang english
 Conclusiones
 \end_layout
 
@@ -147,10 +145,6 @@ En este trabajo se pudo observar que es posible la aplicación de técnicas
  y para las cuales el proceso de plegamiento es muy rápido, estas pasan
  del estado no plegado al plegado sin alcanzar estado intermedios claramente
  visibles.
-\begin_inset Newline newline
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -163,6 +157,93 @@ d, despliegue y uso.
  Al empaquetar todas estas funcionalidades en una máquina virtual, podemos
  abstraer todos estos detalles y concentrarnos más en la aplicación de dichas
  funcionalidades sobre el problema actual que estemos analizando.
+\end_layout
+
+\begin_layout Section
+Trabajos Futuros
+\end_layout
+
+\begin_layout Subsection
+Optimización de la métrica TM-Score
+\end_layout
+
+\begin_layout Standard
+El algoritmo de reducción de proteínas que proponemos en este trabajo inicia
+ con un clustering "rápido" con el cual agrupamos proteínas basándose en
+ la métrica TM-Score como medida de similitud.
+ Esta métrica ofrece ventajas respecto a otras medidas como el RMSD a la
+ hora de capturar las similitudes entre proteínas.
+ En general, el algoritmo de TM-Score encuentra regiones comunes entre dos
+ estructuras comparando las posiciones cada residuo de la estructura dando
+ un mayor peso a los residuos que estén a una distancia más corta de acuedo
+ a un umbral determinado, mientra da menos peso a los residuos más distanciados
+ lo que hace el algoritmo más sensible a la topología global que a las desviacio
+nes de las estructuras locales [
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zhan2004"
+literal "false"
+
+\end_inset
+
+.
+ De acuerdo a esto se considera que las dos proteínas son aleatorias o son
+ muy diferentes si su puntaje total es menor que 0.17 en un rango de 0 a
+ 1, o parecidas si pasan de 0.5 en adelante.
+\end_layout
+
+\begin_layout Standard
+Una forma de adaptar este algoritmo para nuestra evaluación rápida es detener
+ el cálculo del puntaje una vez se alcance un valor mayor a 0.5 que es el
+ valor para decidir que son proteínas relacionadas, ya que no nos interesa
+ el puntaje total sino saber que son suficientemente parecidas.
+ Creemos que el tiempo de ejecución del algoritmo al comparar dos estructuras
+ se puede reducir a la mitad y por lo tanto el proceso de reducción se puede
+ ver impactado grandemente porque es la operación que más se utiliza.
+\end_layout
+
+\begin_layout Subsection
+Analizar todas las trayectorias de proteínas del conjunto de Anton
+\end_layout
+
+\begin_layout Standard
+En esta tesis se analizaron solo cuatro trayectorias de proteínas de longitud
+ media pero que contienen miles de conformaciones (30000~1000000 conformaciones).
+ En ese mismo conjunto existen otras ocho trayectorias que son mucho más
+ extensas (> 1000000 conformaciones) y que no las analizamos por falta de
+ recursos computacionales.
+ Con el flujo de trabajos ya implementado se podría ejecutar el proceso
+ de análisis de forma automática para cualquier trayectoria si se garantiza
+ los recursos computacionales necesarios para más de un día de procesamiento.
+\end_layout
+
+\begin_layout Subsection
+Optimizar el multiprocesamiento de los algoritmos
+\end_layout
+
+\begin_layout Standard
+Todos las implementaciones de los algoritmos utilizan multiprocesamiento
+ a través de 
+\emph on
+multicore, 
+\emph default
+es decir paralelizan la ejecución usando todos los 
+\emph on
+core
+\emph default
+ de la máquina donde se ejecute.
+ El grupo de bioinformática tiene un cluster que abarca muchas máquinas
+ y cada una de ellas con muchos 
+\emph on
+cores.
+
+\emph default
+ La propuesta es optimizar los algoritmos para que trabajen con el cluster
+ y aprovechen todos los 
+\emph on
+cores
+\emph default
+ de todas las máquinas.
 \end_layout
 
 \end_body

@@ -92,10 +92,10 @@ name "chpBackground"
  En este capítulo presentamos algunos conceptos básicos de la estructura
  de la proteína y el plegamiento de proteínas.
  Describimos las dos visiones del problema del plegamiento de proteínas,
- una relacionada con la predicción de la estructura, y la otra relacionada
- con la explicación del proceso de plegamiento de proteínas inherente.
- A continuación, presentamos el concepto de rutas e intermedios.
- Y finalmente, describimos brevemente la técnica de dinámica molecular para
+ una relacionada con la predicción de la estructura, la otra relacionada
+ con la explicación del proceso de plegamiento de proteínas inherente, y
+ presentamos el concepto de rutas e intermedios de plegamiento.
+ Finalmente, describimos brevemente la técnica de dinámica molecular para
  estudiar y analizar el movimiento de las moléculas.
 \end_layout
 
@@ -144,7 +144,8 @@ noprefix "false"
 \emph on
 backbone
 \emph default
- del polipéptido.Algunos de estos enlaces, los únicos enlaces donde el 
+ del polipéptido.
+ Algunos de estos enlaces, los únicos enlaces donde el 
 \begin_inset Formula $C\alpha$
 \end_inset
 
@@ -159,6 +160,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename imagenes/protein-structure-aminos.png
 	scale 70
@@ -298,6 +300,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename imagenes/folding-levels-LG.png
 	scale 50
@@ -481,7 +484,8 @@ En los últimos años, ha surgido una "nueva visión" del plegado de proteínas
 \emph on
 embudo de plegamiento
 \emph default
-.Visualiza el proceso de plegado como una especie de embudo de libre energía,
+.
+ Visualiza el proceso de plegado como una especie de embudo de libre energía,
  en el que varias conformaciones desplegadas de una proteína en el borde,
  caracterizadas por una alta energía libre y un alto grado de entropía conformac
 ional, pueden plegarse siguiendo muchos caminos, hasta alcanzar su estado
@@ -510,6 +514,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename imagenes/folding-funnel-Griffiths01-mod.pdf
 	scale 50
@@ -581,7 +586,7 @@ Rutas de plegamiento de proteínas
 Muchas proteínas se pliegan a sus conformaciones nativas en menos de unos
  segundos porque el plegado de proteínas no es una búsqueda aleatoria del
  nativo entre todas las conformaciones posibles.
- Esta afirmación fue probada por Levinthal a finales de los años 60.
+ Esta afirmación fue probada por Levinthal a finales de los años 60 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Levinthal68"
@@ -603,7 +608,7 @@ La visión de un único sendero de plegamiento formulada por Levinthal fue
  de la superficie de la energía que reduce el problema de la búsqueda a
  escalas de tiempo biológicamente relevantes sin necesidad de seguir un
  camino específico pero con la posibilidad de llegar al nativo por muchos
- de ellos.
+ de ellos 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Lazaridis97"
@@ -619,7 +624,7 @@ Sin embargo, el concepto clásico de una ruta de plegado como una secuencia
  de eventos seguida de proteínas, sigue siendo válido en esta "nueva visión"
  del plegado.
  Los múltiples y microscópicos caminos que una proteína puede seguir, sólo
- están cubriendo una ruta más general y macroscópica.
+ están cubriendo una ruta más general y macroscópica 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "PandeTanaka98, Undgaonkar08"
@@ -642,8 +647,7 @@ Intermedios de plegamiento
 \begin_layout Standard
 Aunque la importancia de los productos intermedios en el plegado y la función
  de las proteínas ha sido reconocida desde hace mucho tiempo, siguen abiertas
- preguntas fundamentales sobre el papel que desempeñan en el plegado.
- 
+ preguntas fundamentales sobre el papel que desempeñan en el plegado 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Brockwell2007, Undgaonkar08"
@@ -666,7 +670,7 @@ En la ruta para alcanzar su estado nativo, una proteína pasa a través de
 intermedios de plegamiento
 \emph default
 , como argumentó Levinthal con las vías de plegamiento de proteínas.
- Pero su presencia fue objeto de mucha controversia
+ Pero su presencia fue objeto de mucha controversia 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Brockwell2007"
@@ -729,7 +733,7 @@ En el mismo sentido, no existe un tipo único de intermedios, ya que pueden
  exhiben.
  Como las estructuras nativas secundarias y supersecundarias pueden variar
  de parciales a completas, y el empaquetado de residuos puede ser débil
- o fuerte, muchos autores han identificado dos tipos de intermedios
+ o fuerte, muchos autores han identificado dos tipos de intermedios 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Baldwin2013, Undgaonkar08, RoderChang06, Uversky2002, DuanKollman98, RoderColon1997"
@@ -865,7 +869,7 @@ literal "true"
 
 \end_inset
 
-).
+.
  
 \end_layout
 
@@ -905,7 +909,7 @@ literal "false"
  evaluar estos modelos simulados, ahora su aplicación se extiende además
  a la identificación, evaluación, entendimiento y predicción de cambios
  conformacionales en proteínas, siendo esto un punto clave en su funcionamiento
- biológico
+ biológico 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Kufareva2015"

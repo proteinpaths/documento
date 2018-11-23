@@ -228,11 +228,11 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Graphics
 	filename imagenes/ICF-property-plot-1BDD-p0-selected.pdf
 	scale 60
+	BoundingBox 0bp 0bp 576bp 288bp
+	clip
 
 \end_inset
 
@@ -240,8 +240,6 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -249,8 +247,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
-\lang english
 Niveles de plegamiento para una ruta de 4 estados
 \end_layout
 
@@ -258,7 +254,6 @@ Niveles de plegamiento para una ruta de 4 estados
 
 
 \series bold
-\lang english
 Niveles de plegamiento para una ruta de 4 estados.
  
 \series default
@@ -289,6 +284,13 @@ name "fig:Pathway-with-four-folding-levels"
 \end_layout
 
 \begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
 La aparición de dos estados en el plegamiento de proteínas ya ha sido reportado
  anteriormente en la literatura
 \begin_inset CommandInset citation

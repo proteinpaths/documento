@@ -43,7 +43,7 @@
 \bibtex_command default
 \index_command default
 \paperfontsize default
-\spacing double
+\spacing onehalf
 \use_hyperref true
 \pdf_bookmarks true
 \pdf_bookmarksnumbered false
@@ -236,6 +236,30 @@ LatexCommand tableofcontents
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+tablename}{Tabla}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+listtablename}{Índice de tablas}
+\end_layout
+
+\end_inset
+
+
 \begin_inset FloatList table
 
 \end_inset
@@ -260,22 +284,6 @@ status open
 
 \backslash
 mainmatter
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-%{
-\backslash
-setstretch{1.5} 
 \end_layout
 
 \end_inset
@@ -364,12 +372,6 @@ filename "capitulo-07-conclusiones/capitulo-07-conclusiones.lyx"
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "capitulo-08-trabajo-futuro/capitulo-08-trabajo-futuro.lyx"
-
-\end_inset
-
 
 \end_layout
 

@@ -82,6 +82,29 @@
 Algoritmo Rápido de Reducción de Trajectorias
 \end_layout
 
+\begin_layout Standard
+En los últimos años se ha logrando realizar simulaciones de plegamiento
+ de proteínas mucho más largas que llegan al orden de los milisegundos,
+ lo que antes no se había realizado principalmente debido a las limitaciones
+ en los recursos computacionales.
+ Muchas de estos datos de trayectorias de plegamiento se están colocando
+ a disposición pública para que sean analizados, sin embargo, debido a la
+ inmensa cantidad de conformaciones de proteínas que resultan en estas trayector
+ias, su análisis se vuelve complejo.
+ Por lo tanto, se vuelve necesario el desarrollo de métodos que logren obtener
+ las conformaciones o grupos de conformaciones más representativas de la
+ trayectoria teniendo en cuenta dos aspectos claves: el tiempo computacional
+ y la calidad de los datos.
+ 
+\end_layout
+
+\begin_layout Standard
+En este capitulo presentamos el algoritmo que creamos para realizar reducciones
+ rápidas de trayectorias de plegamiento de proteínas teniendo en cuenta
+ los dos aspectos anteriores.
+ 
+\end_layout
+
 \begin_layout Section
 Antecedentes
 \end_layout
@@ -221,9 +244,6 @@ a al trasladar las estructuras 3D a representaciones 2D, perdiendo información
 
 \begin_layout Subsection
 Simulaciones de Plegamiento
-\end_layout
-
-\begin_layout Standard
 \begin_inset Note Note
 status collapsed
 
@@ -860,8 +880,9 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="2" columns="2">
+<lyxtabular version="3" rows="2" columns="3">
 <features tabularvalignment="middle">
+<column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <row>
@@ -871,6 +892,50 @@ status open
 \begin_layout Plain Layout
 A.
  1FCA1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -949,6 +1014,15 @@ status open
 
 \end_inset
 
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 
 \end_layout
 
