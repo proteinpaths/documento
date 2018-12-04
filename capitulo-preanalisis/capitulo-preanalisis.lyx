@@ -1,0 +1,705 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ../ubcthesis
+\begin_preamble
+\usepackage[T1]{fontenc}
+\usepackage{charter}
+\end_preamble
+\use_default_options true
+\master ../root.lyx
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Análisis Preliminar de Trayectorias
+\end_layout
+
+\begin_layout Standard
+En este capitulo vamos a analizar dos trayectorias con características muy
+ diferentes tanto en el método como fueron simuladas como en las características
+ físicas de las proteínas.
+ El objetivo de este análisis es obtener una visión previa de la forma de
+ plegamiento de cada proteína de acuerdo a los valores de sus principales
+ propiedades físicas y estructurales.
+ Al mismo tiempo, con este análisis queremos que tan diferentes pueden ser
+ los resultados de esta tesis frente a los resultados del trabajo de Garreta.
+\end_layout
+
+\begin_layout Section
+Características de las trayectorias
+\end_layout
+
+\begin_layout Standard
+Las características de las dos trayectorias se pueden ver en la Tabla 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Comparación-Trayectorias"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ La primera trayectoria corresponde a la proteína 1FCA que contiene 108
+ aminoácidos, simulada con el método 
+\emph on
+PRM
+\emph default
+, y que contiene alrededor de 237 conformaciones.
+ La segunda trayectoria corresponde a 2JOF, de 20 aminoácidos, simulada
+ con el método de Dinámica Molecular en el supercomputador Anton, y que
+ contiene un poco más de 1 millón de conformaciones.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Comparación de dos trayectorias con características diferentes.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "comparacionTrayectorias"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="4cm">
+<column alignment="center" valignment="top" width="4cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Trayectoria 1FCA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Trayectoria 2JOF
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Tamaño Proteína
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Mediano (108 AA)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pequeño (20 AA)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Tamaño Trayectoria
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pequeña (237 conformaciones)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Grande (1 millón conformaciones)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Método Simulación
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+PRM
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Dinámica Molecular
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Evaluación de las propiedades
+\end_layout
+
+\begin_layout Standard
+Presentamos en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Comparación-Trayectorias"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ los valores calculados a las conformaciones de las trayectorias de dos
+ proteínas de acuerdo a las características de las trayectorias mostradas
+ anteriormente.
+ En la primera trayectoria (proteína 1FCA) observamos una tendencia donde
+ los valores crecen o disminuyen progresivamente de acuerdo a la propiedad,
+ lo que sirvió a Luis Garreta para caracterizar estados de plegamiento iniciales
+, intermedios, y finales.
+ Sin embargo, en las trayectorias que estamos analizando en esta tesis (proteína
+ 2JOF) solo se alcanza a observar el estado inicial (círculo rojo) el estado
+ final (círculo azul), ya que los cambios de los valores de las propiedades
+ en el transcurso del plegamiento son súbitos.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tabcolsep=1pt
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="1cm">
+<column alignment="left" valignment="top" width="4cm">
+<column alignment="left" valignment="top" width="6cm">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" topline="true" bottomline="true" usebox="none" width="6cm">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align center
+Proteína 1FCA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align center
+Proteína 2JOF
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset VSpace 20bp
+\end_inset
+
+NC
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset VSpace 0bp
+\end_inset
+
+
+\begin_inset Graphics
+	filename imagenes/1FCA/NCx.pdf
+	lyxscale 10
+	scale 12
+	BoundingBox 35bp 0bp 1440bp 504bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset VSpace 0bp
+\end_inset
+
+
+\begin_inset Graphics
+	filename imagenes/2JOF/NCx.pdf
+	lyxscale 10
+	scale 12
+	BoundingBox 25bp 0bp 1440bp 504bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset VSpace 20bp
+\end_inset
+
+HB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset VSpace 0bp
+\end_inset
+
+
+\begin_inset Graphics
+	filename imagenes/1FCA/HBx.pdf
+	lyxscale 10
+	scale 12
+	BoundingBox 35bp 0bp 1440bp 504bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset VSpace 0bp
+\end_inset
+
+
+\begin_inset Graphics
+	filename imagenes/2JOF/HBx.pdf
+	lyxscale 10
+	scale 12
+	BoundingBox 25bp 0bp 1440bp 504bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset VSpace 20bp
+\end_inset
+
+RG
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset VSpace 0bp
+\end_inset
+
+
+\begin_inset Graphics
+	filename imagenes/1FCA/RGx.pdf
+	lyxscale 10
+	scale 12
+	BoundingBox 35bp 0bp 1440bp 504bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset VSpace 0bp
+\end_inset
+
+
+\begin_inset Graphics
+	filename imagenes/2JOF/RGx.pdf
+	lyxscale 10
+	scale 12
+	BoundingBox 25bp 0bp 1440bp 504bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset VSpace 20bp
+\end_inset
+
+SP
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset VSpace 0bp
+\end_inset
+
+
+\begin_inset Graphics
+	filename imagenes/1FCA/SPx.pdf
+	lyxscale 10
+	scale 12
+	BoundingBox 35bp 0bp 1440bp 504bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset VSpace 0bp
+\end_inset
+
+
+\begin_inset Graphics
+	filename imagenes/2JOF/SPx.pdf
+	lyxscale 10
+	scale 12
+	BoundingBox 25bp 0bp 1440bp 504bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Comparación de los valores de propiedades de dos trayectorias.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Comparación-Trayectorias"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Aquí viene ya el análisis más detallado de acuerdo al tipo de propiedad
+ que se esté analizando.
+ Por ejemplo de acuerdo al plegamiento los contactos nativos al inicio deben
+ ser muy pocos e irse formando a medida que transcurre el plegamiento hasta
+ llegar a un máximo, como se observa en la Figura de la proteina 1FCA.
+ Sin embargo en el plegamiento de la proteína 2JOF se inicia con pocos contactos
+ nativos y se termina con un máximo de contactos, pero se observa que no
+ existen estados intermedios que se puedan caracterizar ya que no se observa
+ ninguna tendencia.
+ Ahora realice un análisis con las demás propiedades de acuerdo a lo que
+ la propiedad significa y como debería comportarse en el plegamiento.
+\end_layout
+
+\begin_layout Plain Layout
+Finalmente se tiene que hablar del posible mecanismo de plegamiento
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img-paper-MaZhan07.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+que pueden seguir estas trayectorias de la tesis, ya que las de Garreta
+ eran trayectorias con mecanismo multi-estado donde existen o se persiben
+ estados intermedios, mientras que las que se analizan ahora las de Shaw
+ son proteínas de plegamiento rápido (fast-folding) [Cita de Articulo de
+ Shaw08], y según la literatura este tipo de proteínas se pliegan sin estructura
+s estables osea sin intermedios visibles [Cita Best2013].
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img-paper-Best2013.png
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
