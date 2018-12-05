@@ -566,7 +566,7 @@ RG
 \begin_inset VSpace 20bp
 \end_inset
 
-SP
+AS
 \end_layout
 
 \end_inset
@@ -648,6 +648,80 @@ name "fig:Comparación-Trayectorias"
 \end_layout
 
 \begin_layout Standard
+A continuación se describe en más detalle la gráfica:
+\end_layout
+
+\begin_layout Subsubsection*
+Contactos Nativos (NC): 
+\end_layout
+
+\begin_layout Standard
+Los contactos nativos representan los aminoácidos en la proteína que no
+ son contiguos en la secuencia lineal de aminoácidos, pero que cuando la
+ proteína se encuentra plegada, hacen contacto entre sí y además, dichos
+ contactos se encuentran también en la estructura nativa.
+ Al inicio del plegamiento se espera que la cantidad de contactos nativos
+ sea baja, y que dicho número se eleve en la medida en que transcurre el
+ proceso de plegamiento.
+ La tendencia es clara para 1FCA, pues se observa que gradualmente aumenta
+ el valor de esta métrica llegando a un valor significativamente alto cuando
+ es evaluada al final de la simulación.
+ Sin embargo en el plegamiento de la proteína 2JOF se inicia con pocos contactos
+ nativos y se termina con un máximo de contactos, pero se observa que no
+ existen estados intermedios que se puedan caracterizar ya que no se observa
+ ninguna tendencia.
+\end_layout
+
+\begin_layout Subsubsection*
+Enlaces de Hidrógeno (HB):
+\end_layout
+
+\begin_layout Standard
+El número de enlaces de hidrógeno de una estructura se relaciona con la
+ estabilidad de la misma.
+ En una trayectora de plegamiento se espera observar un valor bajo al comienzo
+ y un valor alto al finalizar.
+ Con la proteína 1FCA se puede ver ese comportamiento, pues la gráfica muestra
+ un incremento en este valor, que se sostiene a lo largo de la trayectoria.
+ En la proteína 2jOF se obtiene también valores bajos al iniciar y valores
+ altos al finalizar la simulación, pero de nuevo no se evidencia un crecimiento
+ gradual de esta métrica, sino que se alterna de valores bajos a valores
+ altos sin la presencia visible de estados intermedios.
+\end_layout
+
+\begin_layout Subsubsection*
+Radio de Giro (RG):
+\end_layout
+
+\begin_layout Standard
+El radio de giro cuantifica la distancia desde el centro de la proteína
+ hasta sus extremos, e indica que tan compacta está una estructura y por
+ tanto se relaciona con su grado de plegamiento.
+ En la primera proteína se observa un valor alto al inicio de la simulación
+ y un valor bajo al finalizar, lo que significa que entre más cercana está
+ la estructura simulada a la nativa, su nivel de compactación es mayor y
+ por lo tanto la distancia del centro a los extremos decrece.
+ Con la proteína 2FCA dicha tendencia no se observa, y los valores cambian
+ de una manera más abrupta.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Área Accesible (AS):
+\end_layout
+
+\begin_layout Standard
+El área accesible es una metrica que se espera sea menor cuanto más cercana
+ es una estructura a la nativa, ya que que la estructura se encuentra más
+ compacta y el área accesible es menor que cuando la proteína está desplegada.
+ En la proteína 1FCA se puede observar la disminución del valor obtenido
+ para esta propiedad a lo largo del plegamiento.
+ La proteína 2FCA también presenta similitudes en los valores iniciales
+ y finales de la gráfica, pero a lo largo de la misma es dificil observar
+ una tendencia clara.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Note
 status open
 
@@ -699,6 +773,14 @@ s estables osea sin intermedios visibles [Cita Best2013].
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection*
+Proteínas de dos estados y de múltiples estados
+\end_layout
+
+\begin_layout Standard
+Este comportamieto observado puede corroborarse en la literatura.
 \end_layout
 
 \end_body
