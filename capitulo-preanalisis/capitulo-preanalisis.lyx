@@ -780,7 +780,27 @@ Proteínas de dos estados y de múltiples estados
 \end_layout
 
 \begin_layout Standard
-Este comportamieto observado puede corroborarse en la literatura.
+Se puede observar que los dos conjuntos de proteínas comparados presentan
+ diferencias significativas no solo su longitud, tipo de simulación o duración
+ de la simulación, sino también en el comportamiento presentado en algunas
+ de las propiedades descritas.
+ Una explicación para este comportamiento puede encontrarse en la existencia
+ de proteínas multi estado y proteínas de dos estados
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zwanzig148,readmissiona2016,BAKK20002722"
+literal "false"
+
+\end_inset
+
+.
+ Se ha observado que en terminos generales el plegamiento se puede clasificar
+ en dos tipos: de dos estados y multi-estado.
+ Los plegamientos de dos estados no presentan estados intermedios visibles
+ durante el proceso de plegamiento.
+ Las proteínas con características de multi-estado, sim embargo, presentan
+ intermedios que se van acumulando desde las etapas tempranas del plegado
+ mostrando un proceso de ensamblaje por pasos (ZhangMa2007).
 \end_layout
 
 \end_body
